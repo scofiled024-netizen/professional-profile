@@ -13,7 +13,7 @@ export interface FitReportResult {
 type OutputLang = "en" | "zh";
 
 export async function getRemainingRequests(): Promise<number> {
-  const response = await fetch("/api/jd-match/remaining");
+  const response = await fetch("/api/jd-match-remaining");
   if (!response.ok) return 0;
   const data = (await response.json()) as { remaining?: number };
   return data.remaining ?? 0;
@@ -31,21 +31,18 @@ export async function analyzeJobDescription(
   const response = await fetch("/api/jd-match", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ jd: trimmed, outputLang }),
+    body: JSON.stringify({ jobDescription: trimmed, outputLang }),
   });
 
-  const data = (await response.json()) as {
-    result?: FitReportResult;
-    error?: string;
-  };
+  const data = (await response.json()) as FitReportResult & { error?: string };
 
   if (!response.ok) {
     throw new Error(data.error ?? "API_ERROR");
   }
 
-  if (!data.result) {
+  if (!data.fitScore || !data.recruiterSummary) {
     throw new Error("API_ERROR");
   }
 
-  return data.result;
+  return data;
 }

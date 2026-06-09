@@ -45,7 +45,7 @@ const UI = {
       JD_TOO_SHORT: "Please paste a longer job description.",
       RATE_LIMIT: "Daily limit reached. Please try again tomorrow.",
       MISSING_API_KEY: "JD Matcher is not configured yet.",
-      INVALID_API_KEY: "JD Matcher API key is invalid. Check DEEPSEEK_API_KEY in .env.",
+      INVALID_API_KEY: "JD Matcher API key is invalid.",
       INSUFFICIENT_BALANCE: "DeepSeek account has insufficient balance. Top up at platform.deepseek.com.",
       NETWORK_ERROR: "Cannot reach DeepSeek API. Check your internet connection.",
       API_ERROR: "JD Matcher service is temporarily unavailable.",
@@ -78,7 +78,7 @@ const UI = {
       JD_TOO_SHORT: "请粘贴更完整的职位描述。",
       RATE_LIMIT: "今日分析次数已用完，请明天再试。",
       MISSING_API_KEY: "职位匹配功能尚未配置。",
-      INVALID_API_KEY: "DeepSeek API 密钥无效，请检查 .env 中的 DEEPSEEK_API_KEY。",
+      INVALID_API_KEY: "职位匹配 API 密钥无效。",
       INSUFFICIENT_BALANCE: "DeepSeek 账户余额不足，请前往 platform.deepseek.com 充值。",
       NETWORK_ERROR: "无法连接 DeepSeek 服务，请检查网络。",
       API_ERROR: "职位匹配服务暂不可用。",
@@ -159,7 +159,7 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<FitReportResult | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [remaining, setRemaining] = useState(26);
+  const [remaining, setRemaining] = useState(20);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
