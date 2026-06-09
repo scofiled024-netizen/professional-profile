@@ -208,12 +208,7 @@ export default function CareerBridgeMap({ lang }: CareerBridgeMapProps) {
         {c.subtitle}
       </p>
 
-      <div className="relative">
-        <div
-          className="hidden lg:block absolute top-1/2 left-[12.5%] right-[12.5%] h-px bg-border/60 -translate-y-1/2 pointer-events-none"
-          aria-hidden="true"
-        />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {c.cards.map((card) => {
             const Icon = card.icon;
             const isOpen = selected === card.id;
@@ -288,7 +283,6 @@ export default function CareerBridgeMap({ lang }: CareerBridgeMapProps) {
               </div>
             );
           })}
-        </div>
       </div>
     </section>
   );
