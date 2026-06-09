@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Mail, Linkedin, ArrowUp, Sun, Moon, Download, Menu, X } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
 import JDMatcher from "@/components/JDMatcher";
-import photoSrc from "@assets/刘超_个人照_1780633525630.jpg";
+import CareerBridgeMap from "@/components/CareerBridgeMap";
+import photoSrc from "@assets/profile-photo.jpg";
 
 type Lang = "en" | "zh";
 
@@ -559,6 +560,11 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* CAREER BRIDGE MAP */}
+        <FadeIn>
+          <CareerBridgeMap lang={lang} />
+        </FadeIn>
 
         {/* WORK */}
         <section id="work" className="scroll-mt-32">

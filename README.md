@@ -1,46 +1,72 @@
 # Professional Profile
 
-Local copy of your Replit portfolio, recovered from a Safari web archive.
+Personal portfolio website with a JD Matcher feature. The site is served from `dist/` by an Express server that also handles the API.
 
-## Setup
+## Quick start
 
 ```bash
-cd ~/professional-profile
 npm install
 cp .env.example .env
-# Edit .env and add your DeepSeek API key (https://platform.deepseek.com/)
-npm run dev
+# Add your DeepSeek API key to .env
+npm start
 ```
 
-Open http://localhost:5173
+Open **http://localhost:3001**
 
-### Hero JD Matcher
+## Environment variables
 
-The hero section includes a **JD Matcher** for recruiters: paste a job description, and DeepSeek analyzes fit against Chao's profile.
+Copy `.env.example` to `.env`:
 
-1. Copy `.env.example` to `.env`
-2. Set `VITE_DEEPSEEK_API_KEY` with your key from [DeepSeek Platform](https://platform.deepseek.com/)
-3. Restart the dev server after changing `.env`
+```
+DEEPSEEK_API_KEY=your_key_here
+PORT=3001
+```
 
-Never commit `.env` — it is gitignored. The API key is read at build time via Vite env vars.
+- `DEEPSEEK_API_KEY` — server-side only, never exposed to the browser
+- `PORT` — optional, defaults to 3001
 
-## Build for production
+Never commit `.env`.
+
+## Scripts
+
+| Command | Purpose |
+|---------|---------|
+| `npm start` | Production server (serves `dist/` + `/api`) |
+| `npm run dev` | Development server with auto-restart |
+| `npm run check` | Start server once (smoke test) |
+| `npm run build:frontend` | Rebuild `dist/` from `src/` (optional, requires devDependencies) |
+
+## How it works
+
+- Express serves static files from `dist/` (HTML, CSS, JS, PDFs, images)
+- `POST /api/jd-match` — JD analysis (DeepSeek called server-side only)
+- `GET /api/jd-match/remaining` — rate limit status
+- Non-API routes fall back to `dist/index.html`
+- If `DEEPSEEK_API_KEY` is missing, the site still loads; only JD Matcher shows an error
+
+## Deployment (Replit, VPS, etc.)
 
 ```bash
-npm run build
-npm run preview
+npm install --production
+cp .env.example .env
+# set DEEPSEEK_API_KEY
+npm start
 ```
 
-## Project structure
+**Do not deploy `dist/` alone** — the JD Matcher requires the Express server.
 
-- `src/pages/Home.tsx` — main portfolio page (EN/中文 content)
-- `src/components/JDMatcher.tsx` — hero JD Matcher UI
-- `src/lib/jdMatcher.ts` — DeepSeek API integration
-- `src/data/profile.ts` — candidate profile for matcher prompts
-- `attached_assets/` — profile photo
-- `public/` — static files (resumes)
+## Optional: edit frontend source
 
-## Notes
+The full React source lives in `src/`. To rebuild after UI changes:
 
-- Resume PDFs should live in `public/resume-en.pdf` and `public/resume-zh.pdf`.
-- Exported from Replit dev session via Safari web archive on 2026-06-06.
+```bash
+npm install          # includes devDependencies
+npm run build:frontend
+npm start
+```
+
+## Security
+
+- API key is read only from `process.env.DEEPSEEK_API_KEY` in `server/jdMatcher.js`
+- Frontend calls `/api/jd-match` only — no direct DeepSeek requests
+- No `VITE_` prefixed secrets

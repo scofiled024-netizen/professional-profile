@@ -4,14 +4,24 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "start": "NODE_ENV=production node server/index.js",
+    "dev": "NODE_ENV=development node --watch server/index.js",
+    "check": "node server/index.js",
+    "check:api": "node server/check-deepseek.js",
+    "build:frontend": "tsc -b && vite build"
   },
   "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
     "@radix-ui/react-toast": "^1.2.14",
     "@radix-ui/react-tooltip": "^1.2.7",
     "@tanstack/react-query": "^5.80.7",
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.5.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.16.0",
@@ -19,15 +29,9 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.3.0",
-    "wouter": "^3.7.1"
-  },
-  "devDependencies": {
-    "@tailwindcss/vite": "^4.1.8",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
-    "@vitejs/plugin-react": "^4.5.1",
     "tailwindcss": "^4.1.8",
     "typescript": "^5.8.3",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "wouter": "^3.7.1"
   }
 }

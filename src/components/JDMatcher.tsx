@@ -1,91 +1,153 @@
-import { useState } from "react";
-import { Loader2, Sparkles, CheckCircle2, AlertCircle, MinusCircle } from "lucide-react";
+import { useEffect, useState } from "react";
+import {
+  Loader2,
+  Sparkles,
+  CheckCircle2,
+  AlertCircle,
+  MinusCircle,
+  Copy,
+  Check,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   analyzeJobDescription,
   getRemainingRequests,
-  type FitRating,
-  type JDMatchResult,
+  type FitLabel,
+  type FitReportResult,
 } from "@/lib/jdMatcher";
 
 type Lang = "en" | "zh";
 
 const UI = {
   en: {
-    title: "JD Fit Checker",
-    subtitle: "Paste a job description — get an honest fit read in seconds.",
+    title: "Recruiter Fit Report",
+    subtitle: "Paste a job description — get a structured fit report in seconds.",
     placeholder: "Paste job description here…",
-    analyze: "Show Analysis",
-    analyzing: "Analyzing…",
-    remaining: (n: number) => `${n} analyses remaining today`,
-    ratingLabel: "Fit Rating",
-    ratings: {
-      Strong: "Strong Fit",
-      Moderate: "Moderate Fit",
-      Partial: "Partial Fit",
-    } as Record<FitRating, string>,
-    alignment: "Alignment",
-    fitPoints: "Specific Fit",
-    gaps: "Honest Gaps",
-    assessment: "Recruiter Assessment",
+    analyze: "Generate Report",
+    analyzing: "Analyzing role fit…",
+    remaining: (n: number) => `${n} reports remaining today`,
+    fitScore: "Overall Fit",
+    match: "Match",
+    strengths: "Best-Matched Strengths",
+    gaps: "Possible Gaps",
+    talkingPoints: "Interview Talking Points",
+    recruiterSummary: "Recruiter Summary",
+    copySummary: "Copy Summary",
+    copied: "Copied!",
+    keywords: "Suggested Resume Keywords",
+    labels: {
+      "Strong Fit": "Strong Fit",
+      "Good Fit": "Good Fit",
+      "Partial Fit": "Partial Fit",
+      "Stretch Role": "Stretch Role",
+    } as Record<FitLabel, string>,
     errors: {
-      JD_TOO_SHORT: "Please paste a longer job description (at least 30 characters).",
-      RATE_LIMIT: "Daily analysis limit reached. Please try again tomorrow.",
-      MISSING_API_KEY: "API key not configured. See setup instructions.",
-      API_ERROR: "Analysis unavailable — please try again.",
-      default: "Analysis unavailable — please try again.",
+      JD_TOO_SHORT: "Please paste a longer job description.",
+      RATE_LIMIT: "Daily limit reached. Please try again tomorrow.",
+      MISSING_API_KEY: "JD Matcher is not configured yet.",
+      INVALID_API_KEY: "JD Matcher API key is invalid. Check DEEPSEEK_API_KEY in .env.",
+      INSUFFICIENT_BALANCE: "DeepSeek account has insufficient balance. Top up at platform.deepseek.com.",
+      NETWORK_ERROR: "Cannot reach DeepSeek API. Check your internet connection.",
+      API_ERROR: "JD Matcher service is temporarily unavailable.",
+      default: "JD Matcher service is temporarily unavailable.",
     },
   },
   zh: {
-    title: "职位匹配分析",
-    subtitle: "粘贴职位描述，快速获得客观的匹配评估。",
+    title: "招聘方匹配报告",
+    subtitle: "粘贴职位描述，快速获得结构化的匹配评估报告。",
     placeholder: "请在此粘贴职位描述…",
-    analyze: "开始分析",
-    analyzing: "分析中…",
+    analyze: "生成报告",
+    analyzing: "正在分析职位匹配度…",
     remaining: (n: number) => `今日剩余 ${n} 次分析`,
-    ratingLabel: "匹配度",
-    ratings: {
-      Strong: "高度匹配",
-      Moderate: "中度匹配",
-      Partial: "部分匹配",
-    } as Record<FitRating, string>,
-    alignment: "匹配概述",
-    fitPoints: "具体契合点",
-    gaps: "客观差距",
-    assessment: "招聘方评估",
+    fitScore: "综合匹配度",
+    match: "匹配",
+    strengths: "最佳匹配优势",
+    gaps: "可能的差距",
+    talkingPoints: "面试谈话要点",
+    recruiterSummary: "招聘方摘要",
+    copySummary: "复制摘要",
+    copied: "已复制！",
+    keywords: "建议简历关键词",
+    labels: {
+      "Strong Fit": "高度匹配",
+      "Good Fit": "良好匹配",
+      "Partial Fit": "部分匹配",
+      "Stretch Role": "延伸尝试",
+    } as Record<FitLabel, string>,
     errors: {
-      JD_TOO_SHORT: "请粘贴更完整的职位描述（至少30个字符）。",
+      JD_TOO_SHORT: "请粘贴更完整的职位描述。",
       RATE_LIMIT: "今日分析次数已用完，请明天再试。",
-      MISSING_API_KEY: "API 密钥未配置，请参阅设置说明。",
-      API_ERROR: "分析暂不可用，请稍后重试。",
-      default: "分析暂不可用，请稍后重试。",
+      MISSING_API_KEY: "职位匹配功能尚未配置。",
+      INVALID_API_KEY: "DeepSeek API 密钥无效，请检查 .env 中的 DEEPSEEK_API_KEY。",
+      INSUFFICIENT_BALANCE: "DeepSeek 账户余额不足，请前往 platform.deepseek.com 充值。",
+      NETWORK_ERROR: "无法连接 DeepSeek 服务，请检查网络。",
+      API_ERROR: "职位匹配服务暂不可用。",
+      default: "职位匹配服务暂不可用。",
     },
   },
 };
 
-const RATING_STYLES: Record<
-  FitRating,
-  { bg: string; text: string; border: string; icon: typeof CheckCircle2 }
+const LABEL_STYLES: Record<
+  FitLabel,
+  { bg: string; text: string; border: string; ring: string; icon: typeof CheckCircle2 }
 > = {
-  Strong: {
+  "Strong Fit": {
     bg: "bg-emerald-500/10",
     text: "text-emerald-700 dark:text-emerald-400",
     border: "border-emerald-500/30",
+    ring: "stroke-emerald-500",
     icon: CheckCircle2,
   },
-  Moderate: {
+  "Good Fit": {
+    bg: "bg-sky-500/10",
+    text: "text-sky-700 dark:text-sky-400",
+    border: "border-sky-500/30",
+    ring: "stroke-sky-500",
+    icon: CheckCircle2,
+  },
+  "Partial Fit": {
     bg: "bg-amber-500/10",
     text: "text-amber-700 dark:text-amber-400",
     border: "border-amber-500/30",
+    ring: "stroke-amber-500",
     icon: MinusCircle,
   },
-  Partial: {
+  "Stretch Role": {
     bg: "bg-orange-500/10",
     text: "text-orange-700 dark:text-orange-400",
     border: "border-orange-500/30",
+    ring: "stroke-orange-500",
     icon: AlertCircle,
   },
 };
+
+function ScoreRing({ score, ringClass }: { score: number; ringClass: string }) {
+  const radius = 36;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (score / 100) * circumference;
+
+  return (
+    <div className="relative w-24 h-24 shrink-0">
+      <svg className="w-full h-full -rotate-90" viewBox="0 0 88 88" aria-hidden="true">
+        <circle cx="44" cy="44" r={radius} fill="none" className="stroke-muted" strokeWidth="6" />
+        <circle
+          cx="44"
+          cy="44"
+          r={radius}
+          fill="none"
+          className={ringClass}
+          strokeWidth="6"
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={offset}
+        />
+      </svg>
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
+        <span className="text-2xl font-bold text-foreground leading-none">{score}%</span>
+      </div>
+    </div>
+  );
+}
 
 interface JDMatcherProps {
   lang: Lang;
@@ -95,18 +157,24 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
   const t = UI[lang];
   const [jd, setJd] = useState("");
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<JDMatchResult | null>(null);
+  const [result, setResult] = useState<FitReportResult | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [remaining, setRemaining] = useState(getRemainingRequests);
+  const [remaining, setRemaining] = useState(26);
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    getRemainingRequests().then(setRemaining).catch(() => undefined);
+  }, []);
 
   const handleAnalyze = async () => {
     setError(null);
     setResult(null);
+    setCopied(false);
     setLoading(true);
     try {
-      const match = await analyzeJobDescription(jd);
+      const match = await analyzeJobDescription(jd, lang);
       setResult(match);
-      setRemaining(getRemainingRequests());
+      setRemaining(await getRemainingRequests());
     } catch (err) {
       const code = err instanceof Error ? err.message : "default";
       setError(t.errors[code as keyof typeof t.errors] ?? t.errors.default);
@@ -115,8 +183,19 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
     }
   };
 
-  const ratingStyle = result ? RATING_STYLES[result.rating] : null;
-  const RatingIcon = ratingStyle?.icon;
+  const handleCopy = async () => {
+    if (!result?.recruiterSummary) return;
+    try {
+      await navigator.clipboard.writeText(result.recruiterSummary);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const labelStyle = result ? LABEL_STYLES[result.fitLabel] ?? LABEL_STYLES["Good Fit"] : null;
+  const LabelIcon = labelStyle?.icon;
 
   return (
     <div
@@ -176,7 +255,7 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
           </motion.div>
         )}
 
-        {result && ratingStyle && RatingIcon && (
+        {result && labelStyle && LabelIcon && (
           <motion.div
             key="result"
             initial={{ opacity: 0, y: 12 }}
@@ -185,28 +264,28 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
             className="space-y-5 pt-2 border-t border-border/40"
             data-testid="jd-result"
           >
-            <div
-              className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold ${ratingStyle.bg} ${ratingStyle.text} ${ratingStyle.border}`}
-            >
-              <RatingIcon className="w-4 h-4" />
-              <span className="text-xs uppercase tracking-widest opacity-70 mr-1">{t.ratingLabel}</span>
-              {t.ratings[result.rating]}
-            </div>
-
-            <div>
-              <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-2">
-                {t.alignment}
-              </p>
-              <p className="text-sm leading-relaxed text-foreground">{result.summary}</p>
-            </div>
-
-            {result.fitPoints.length > 0 && (
+            <div className="flex items-center gap-5 flex-wrap">
+              <ScoreRing score={result.fitScore} ringClass={labelStyle.ring} />
               <div>
-                <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-2">
-                  {t.fitPoints}
+                <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-1">
+                  {t.fitScore}
+                </p>
+                <div
+                  className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-sm font-semibold ${labelStyle.bg} ${labelStyle.text} ${labelStyle.border}`}
+                >
+                  <LabelIcon className="w-4 h-4" />
+                  {t.labels[result.fitLabel] ?? result.fitLabel}
+                </div>
+              </div>
+            </div>
+
+            {result.strengths.length > 0 && (
+              <div className="rounded-xl border border-border/40 bg-background/50 p-4">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3">
+                  {t.strengths}
                 </p>
                 <ul className="space-y-2">
-                  {result.fitPoints.map((point, i) => (
+                  {result.strengths.map((point, i) => (
                     <li key={i} className="flex gap-2 text-sm leading-relaxed text-foreground">
                       <span className="text-primary mt-1 shrink-0">•</span>
                       <span>{point}</span>
@@ -217,8 +296,8 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
             )}
 
             {result.gaps.length > 0 && (
-              <div>
-                <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-2">
+              <div className="rounded-xl border border-border/40 bg-background/50 p-4">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3">
                   {t.gaps}
                 </p>
                 <ul className="space-y-2">
@@ -232,12 +311,65 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
               </div>
             )}
 
-            <div className="rounded-xl bg-muted/50 border border-border/40 px-4 py-3">
-              <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-2">
-                {t.assessment}
-              </p>
-              <p className="text-sm leading-relaxed text-foreground italic">{result.assessment}</p>
+            {result.interviewTalkingPoints.length > 0 && (
+              <div className="rounded-xl border border-border/40 bg-background/50 p-4">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3">
+                  {t.talkingPoints}
+                </p>
+                <ol className="space-y-2 list-decimal list-inside">
+                  {result.interviewTalkingPoints.map((point, i) => (
+                    <li key={i} className="text-sm leading-relaxed text-foreground pl-1">
+                      {point}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+
+            <div className="rounded-xl bg-muted/50 border border-border/40 px-4 py-4">
+              <div className="flex items-center justify-between gap-3 mb-3 flex-wrap">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium">
+                  {t.recruiterSummary}
+                </p>
+                <button
+                  type="button"
+                  onClick={handleCopy}
+                  className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-foreground border border-border rounded-full px-3 py-1.5 hover:bg-background transition-colors focus:outline-none focus:ring-2 focus:ring-ring/40"
+                  data-testid="copy-summary-btn"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="w-3.5 h-3.5" />
+                      {t.copied}
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-3.5 h-3.5" />
+                      {t.copySummary}
+                    </>
+                  )}
+                </button>
+              </div>
+              <p className="text-sm leading-relaxed text-foreground">{result.recruiterSummary}</p>
             </div>
+
+            {result.resumeKeywords.length > 0 && (
+              <div>
+                <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3">
+                  {t.keywords}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {result.resumeKeywords.map((keyword, i) => (
+                    <span
+                      key={i}
+                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-foreground border border-border/40"
+                    >
+                      {keyword}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
