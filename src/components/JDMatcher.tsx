@@ -54,7 +54,7 @@ const UI = {
   },
   zh: {
     title: "职位匹配报告",
-    subtitle: "粘贴职位描述，数秒内获取专业匹配分析报告。",
+    subtitle: "粘贴职位描述，数秒内生成结构化匹配报告。",
     placeholder: "请在此粘贴职位描述…",
     analyze: "生成报告",
     analyzing: "正在分析职位匹配度…",

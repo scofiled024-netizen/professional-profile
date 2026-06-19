@@ -4,6 +4,8 @@ import { ArrowRight, Mail, Linkedin, ArrowUp, Sun, Moon, Download, Menu, X } fro
 import { useTheme } from "@/components/ThemeProvider";
 import JDMatcher from "@/components/JDMatcher";
 import CareerBridgeMap from "@/components/CareerBridgeMap";
+import KnowledgeBridge from "@/components/KnowledgeBridge";
+import HowIWork from "@/components/HowIWork";
 import photoSrc from "@assets/profile-photo.jpg";
 
 type Lang = "en" | "zh";
@@ -15,12 +17,14 @@ const CONTENT = {
       work: "Selected Work",
       experience: "Experience",
       capabilities: "Capabilities",
+      knowledge: "Knowledge",
+      "how-i-work": "How I Work",
       about: "About",
       contact: "Contact",
     },
     hero: {
       name: "Chao Liu",
-      title: "Bilingual Client-Facing Professional · B2B Sales & Customer Experience · English–Chinese",
+      title: "Bilingual Client-Facing Professional · B2B Sales & Customer Experience",
       subtitle: "B2B Client Relations · Bilingual Sales · International Brand Services",
       intro: "I've closed 150+ deals solo at Asia's largest hospitality trade expo, managed a 300–400 person corporate client base for nearly three years, and handled international B2B clients entirely in English — without backup. I sit at the intersection of language, operations, and people. That's what bridge work actually looks like.",
       button1: "View Selected Work",
@@ -43,7 +47,7 @@ const CONTENT = {
         },
         {
           num: "02",
-          title: "Full-Cycle Overseas B2B Client Management — English Only",
+          title: "Full-Cycle Overseas B2B Client Management",
           tag: "JCBasic · Shanghai Tingdi Accessories Co., Ltd.",
           context: "At JCBasic, I was the sole English-language contact for managing overseas clients across Alibaba International, Amazon, and Etsy.",
           responsibility: "I acted as the primary English-language contact for 5–25 active overseas B2B clients and managed orders throughout their lifecycle.",
@@ -94,6 +98,13 @@ const CONTENT = {
           summary: "Sole English-language contact for 5–25 overseas B2B clients across Alibaba International, Amazon, and Etsy. Managed the full order lifecycle, commercial documentation, and after-sales coordination independently.",
         },
         {
+          date: "Sep – Dec 2021",
+          role: "English Language Instructor (Internship)",
+          company: "Dianjing Training School, Liuzhou",
+          location: "Liuzhou",
+          summary: "Delivered English lessons to elementary, middle, and high school students. Broke down complex linguistic concepts for non-specialist learners and drew on a dual-degree English background to structure clear, accessible instruction.",
+        },
+        {
           date: "Apr – Jul 2021",
           role: "Operations & Customer Success Intern",
           company: "Yuanfudao",
@@ -128,20 +139,23 @@ const CONTENT = {
       text: [
         "My career has moved across international trade documentation, specialty coffee, corporate service operations, and live exhibition sales. These look like different industries — and they are. But the work in each has been fundamentally the same: understanding what someone needs, communicating it accurately, and making sure things move forward.",
         "I am drawn to roles where the gap between what is said and what is understood actually matters. Where a poorly translated email causes a delayed shipment. Where a client's frustration, handled well, becomes a reason to stay. Where being the only bilingual person in the room is an opportunity, not a burden.",
-        "Outside of work, I think carefully about how things are communicated — tone, precision, what gets left out. I believe calm, clear communication is a skill worth taking seriously.",
+        "Outside of work, I think carefully about how things are communicated — tone, precision, what gets left out. Two years of structured study in international journalism and communication further reinforced this communication instinct. I believe calm, clear communication is a skill worth taking seriously.",
       ],
     },
     education: {
       label: "Education",
       school: "Tianjin Foreign Studies University",
       period: "2016 – 2020",
-      degrees: "Bachelor of Economics in International Economics and Trade + Bachelor of Arts in English",
+      degrees: [
+        "Bachelor of Economics in International Economics and Trade",
+        "Bachelor of Arts in English",
+      ],
     },
     contact: {
       title: "Contact",
       heading: "Let's talk about the role.",
-      body: "Currently open to customer-facing, B2B account management, or client success roles at international brands operating in China. Based in Shanghai. Available immediately.",
-      bodyExtra: "",
+      body: "Currently open to customer-facing, B2B account management, or client success roles at international brands operating in China. Location flexible. Open to nationwide and overseas assignments. Available immediately.",
+      bodyExtra: "Also open to trade operations and international business coordination roles.",
       email: "scofiled024@gmail.com",
       emailLabel: "Email",
       linkedin: "https://www.linkedin.com/in/chaoliu-cn/",
@@ -155,14 +169,16 @@ const CONTENT = {
       work: "精选项目",
       experience: "工作经历",
       capabilities: "核心能力",
+      knowledge: "知识桥梁",
+      "how-i-work": "工作方式",
       about: "关于我",
       contact: "联系方式",
     },
     hero: {
       name: "刘超",
-      title: "双语客户服务专员 · B2B 销售与客户体验 · 中英无障碍沟通",
+      title: "双语客户服务专员 · B2B 销售与客户体验",
       subtitle: "B2B 客户对接 · 双语销售 · 国际品牌服务",
-      intro: "在亚洲最大餐饮酒店展上独立完成 150 余笔成交；近三年服务 300 至 400 人规模企业客户，全程以英文处理海外 B2B 事务，独立承担全部职责。语言、运营与人——我站在三者的交汇点，这正是「桥梁型角色」的真实写照。",
+      intro: "在亚洲最大餐饮酒店展上独立完成 150 余笔成交；近三年服务 300 至 400 人规模企业客户，全程以英文处理海外 B2B 事务，独立承担全部职责。语言、运营与人——我站在三者的交汇点，这正是桥梁型工作的日常形态。",
       button1: "查看精选项目",
       button2: "下载简历",
       linkedin: "https://www.linkedin.com/in/chaoliu-cn/",
@@ -177,28 +193,28 @@ const CONTENT = {
           tag: "HOTELEX 上海 2026 · Panda Bear Express",
           context: "Panda Bear Express 代表 ICOSA Brewhouse 与 Biru Roast 参展 HOTELEX 上海国际酒店餐饮展 2026——亚洲规模最大的餐饮酒店行业贸易展之一。",
           responsibility: "展会为期四天，我是全场唯一的中英双语品牌代表，独立承担销售、产品讲解、口译与买家接待的全部工作。",
-          actions: "向中国贸易买家阐释产品价值；为国际品牌负责人及参赛咖啡师提供实时中英口译；独立处理买家咨询与异议，在客流高峰期独立维持销售运转。",
+          actions: "向中国贸易买家阐释产品价值；为国际品牌负责人及参赛咖啡师提供实时中英口译；处理买家咨询与异议，在客流高峰独立维持销售运转。",
           results: "四天内独立完成 150 多笔成交，有效避免外方团队与中国买家之间的沟通障碍，在高密度、高压力的展会环境中始终保持稳定的服务状态。",
           skills: "双语沟通 · 现场口译 · 销售支持 · 国际品牌代表 · 适应能力",
         },
         {
           num: "02",
-          title: "海外 B2B 客户全周期管理（全英文工作环境）",
+          title: "海外 B2B 客户全周期管理",
           tag: "JCBasic · 上海听谛服饰辅料有限公司",
           context: "在 JCBasic，我负责通过阿里巴巴国际站、Amazon 及 Etsy 对接和管理海外客户，是团队唯一的英文客户联络人。",
           responsibility: "作为 5 至 25 个活跃海外 B2B 客户的唯一英文联络人，全程独立管理订单生命周期。",
           actions: "响应询盘并出具报价；协调订单变更与生产进度；跟踪物流并及时同步客户状态；缮制合同、发票及装箱单；处理售后问题、客诉及应收款跟进。",
-          results: "全程无需翻译协助，独立维护 5 至 25 个海外客户，零主要客诉升级。通过主动跟进订单进度，有效减少客户催单频率，维持长期稳定的合作关系。",
+          results: "全程无需翻译协助，独立对接 5–25 位海外客户，未发生需升级处理的重大客诉。主动同步订单进度，减少客户反复催问，维持长期稳定合作。",
           skills: "订单管理 · 客户沟通 · 单证处理 · 国际贸易 · 利益相关方协调",
         },
         {
           num: "03",
           title: "驻场莉莉丝游戏总部 · 企业大客户咖啡服务管理",
           tag: "Manner Coffee × 莉莉丝游戏 · 上海 · 2023年7月–2026年3月",
-          context: "Manner Coffee 在莉莉丝游戏旗舰总部内运营一家专属咖啡馆——这座园区面积约两万平方米，曾多次荣获设计大奖，而咖啡馆是全公司最核心的服务触点。",
+          context: "Manner Coffee 在莉莉丝游戏旗舰总部内运营一家专属咖啡馆——这座园区面积约两万平方米，曾多次荣获设计大奖，而咖啡馆是全公司重要的日常服务触点。",
           responsibility: "我担任 Manner Coffee 运营团队与莉莉丝游戏企业行政团队之间的常驻现场联络人，负责两个园区的日常服务交付、问题处理及活动协调。",
           actions: "独立处理与莉莉丝游戏行政团队的全部客户沟通。从需求确认到现场执行，全程跟进内部活动协调。近三年来持续进行每日收入核对、库存盘点和运营汇报。",
-          results: "近三年保持零重大服务失误，每日稳定服务 300 至 400 人规模的企业客户群。在高要求的甲方环境中，建立并维护了两家公司之间长期、可信赖的 B2B 服务合作关系。",
+          results: "近三年保持零重大服务失误，每日稳定服务 300 至 400 人规模的企业客户群。在高标准的企业客户环境中，建立并维护了两家公司之间长期、可信赖的 B2B 服务合作关系。",
           skills: "企业客户管理 · 问题解决 · 活动协调 · 运营报告 · 长期客户维系",
         },
       ],
@@ -234,11 +250,18 @@ const CONTENT = {
           summary: "担任公司在阿里巴巴国际站、Amazon 及 Etsy 平台上 5 至 25 个海外 B2B 客户的唯一英语联络人，独立负责完整订单生命周期、商业单证及售后协调。",
         },
         {
+          date: "2021年9月–12月",
+          role: "英语教师（实习）",
+          company: "柳州点睛培训学校",
+          location: "柳州",
+          summary: "为中小学各学段授课，将复杂语言知识转化为易懂表达，并结合英语双学位背景设计清晰、可跟上的课程。",
+        },
+        {
           date: "2021年4月–7月",
           role: "运营与客户成功实习生",
           company: "猿辅导",
           location: "长沙",
-          summary: "管理逾200人的线上用户社群，协助销售转化，在快节奏数字教育环境中处理行政运营工作。",
+          summary: "管理 200 余人的线上用户社群，协助销售转化，在快节奏数字教育环境中处理行政运营工作。",
         },
       ],
     },
@@ -247,11 +270,11 @@ const CONTENT = {
       groups: [
         {
           name: "客户与利益相关方协调",
-          desc: "在 B2B、企业及展会等不同场景中建立并维护专业客户对接，管理客户期望，处理投诉，并在高压环境下确保沟通清晰无误。",
+          desc: "在 B2B、企业及展会等不同场景中建立并维护专业的客户关系，管理客户期望，处理投诉，并在高压环境下确保沟通清晰无误。",
         },
         {
           name: "国际贸易与订单运营",
-          desc: "跨平台（阿里巴巴国际站、Amazon、Etsy）的端到端订单管理，涵盖商业单证、发货追踪及应收款跟进。",
+          desc: "跨平台（阿里巴巴国际站、Amazon、Etsy）的全周期订单管理，涵盖商业单证、发货追踪及应收款跟进。",
         },
         {
           name: "双语与跨文化沟通",
@@ -266,22 +289,22 @@ const CONTENT = {
     about: {
       title: "关于我",
       text: [
-        "我的职业经历横跨国际贸易单证、精品咖啡、企业服务运营和现场展会销售。这些看似分属不同行业，实则不然。但每份工作的内核始终如一：理解对方需求，精准传达信息，并确保事情向前推进。",
-        "我倾向于选择那些「表达」与「理解」之间的落差会产生实质影响的岗位。在这样的角色中，一封翻译不当的邮件会导致发货延迟；一次妥善处理的客户不满，能成为客户留下的理由；而成为房间里唯一的双语者，是一种机遇，而非负担。",
-        "工作之余，我会审慎思考信息的传递方式——语气、精准度，以及那些被省略的内容。我相信，冷静而清晰的沟通，是一项值得认真对待的能力。",
+        "我的职业经历横跨国际贸易单证、精品咖啡、企业服务运营和现场展会销售。这些经历分属不同行业，确实如此；但每份工作的内核始终如一：理解对方需求，精准传达信息，并确保事情向前推进。",
+        "我倾向于选择那些「表达」与「理解」之间的落差会产生实质影响的岗位。在这样的角色中，一封翻译不当的邮件会导致发货延迟；一次妥善处理的客户不满，能成为客户留下的理由；而成为现场唯一的双语沟通者，是一种机遇，而非负担。",
+        "工作之余，我会审慎思考信息的传递方式——语气、精准度，以及那些被省略的内容。两年国际新闻与传播方向的系统学习，进一步强化了这种沟通意识。我相信，冷静而清晰的沟通，是一项值得认真对待的能力。",
       ],
     },
     education: {
       label: "教育背景",
       school: "天津外国语大学",
       period: "2016 – 2020",
-      degrees: "国际经济与贸易 经济学学士 + 英语 文学学士",
+      degrees: ["国际经济与贸易 经济学学士", "英语 文学学士"],
     },
     contact: {
       title: "联系方式",
-      heading: "期待与您交流职位机会。",
-      body: "目前开放客户对接、B2B 大客户管理及客户成功类岗位机会，聚焦在华运营的国际品牌。常驻上海，可立即入职。",
-      bodyExtra: "亦开放外贸跟单、国际业务协调等方向的机会。",
+      heading: "欢迎聊聊合适的机会。",
+      body: "目前开放客户对接、B2B 大客户管理及客户成功类岗位机会，聚焦在华运营的国际品牌。驻地灵活，拥抱全国及海外派遣机会，随时可入职。",
+      bodyExtra: "亦开放外贸跟单、国际业务协调等相关方向。",
       email: "scofiled024@gmail.com",
       emailLabel: "邮箱",
       linkedin: "https://www.linkedin.com/in/chaoliu-cn/",
@@ -291,7 +314,7 @@ const CONTENT = {
   },
 };
 
-const NAV_IDS = ["hero", "work", "experience", "capabilities", "about", "contact"] as const;
+const NAV_IDS = ["hero", "work", "experience", "capabilities", "knowledge", "how-i-work", "about", "contact"] as const;
 
 const FadeIn = ({
   children,
@@ -642,10 +665,10 @@ export default function Home() {
           <div className="relative border-l border-border/40 ml-3 md:ml-0 md:pl-0 space-y-16">
             {c.experience.entries.map((exp, index) => (
               <FadeIn key={index} delay={index * 0.1}>
-                <div className="relative pl-8 md:pl-0 md:grid md:grid-cols-[200px_1fr] md:gap-12">
-                  <div className="absolute left-[-5px] md:left-[195px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-background"></div>
+                <div className="relative pl-8 md:pl-0 md:grid md:grid-cols-[224px_1fr] md:gap-12">
+                  <div className="absolute left-[-5px] md:left-[219px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-background"></div>
                   <div className="hidden md:block text-sm font-medium text-muted-foreground pt-0.5 text-right pr-12 border-r border-border/40">
-                    {exp.date}
+                    <div className="whitespace-nowrap">{exp.date}</div>
                     <div className="text-xs font-normal mt-1">{exp.location}</div>
                   </div>
                   <div className="md:pl-4">
@@ -689,6 +712,16 @@ export default function Home() {
           </div>
         </section>
 
+        {/* KNOWLEDGE BRIDGE */}
+        <FadeIn>
+          <KnowledgeBridge lang={lang} onNavigate={scrollToSection} />
+        </FadeIn>
+
+        {/* HOW I WORK */}
+        <FadeIn>
+          <HowIWork lang={lang} />
+        </FadeIn>
+
         {/* ABOUT */}
         <section id="about" className="scroll-mt-32">
           <FadeIn>
@@ -711,7 +744,14 @@ export default function Home() {
                   <span className="font-semibold">{c.education.school}</span>
                   <span className="text-muted-foreground mx-2">|</span>
                   <span className="text-muted-foreground">{c.education.period}</span>
-                  <div className="mt-1 text-sm text-muted-foreground">{c.education.degrees}</div>
+                  <div className="mt-1 space-y-0.5 text-sm text-muted-foreground">
+                    {c.education.degrees.map((degree) => (
+                      <div key={degree}>{degree}</div>
+                    ))}
+                  </div>
+                  {"extra" in c.education && c.education.extra && (
+                    <div className="mt-2 text-sm text-muted-foreground">{c.education.extra}</div>
+                  )}
                 </div>
               </div>
             </div>

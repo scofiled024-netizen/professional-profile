@@ -16,7 +16,7 @@ const CONTENT = {
         title: "International Trade",
         short: "Built a foundation in cross-border communication, documentation, supplier/client coordination, and business workflows.",
         expanded:
-          "Chao's international trade background gives him practical exposure to cross-border business, English communication, and coordination between different stakeholders. This supports roles involving B2B service, business operations, overseas clients, and commercial support.",
+          "My international trade background gave me practical exposure to cross-border business, English communication, and coordinating across multiple stakeholders. This foundation supports roles in B2B service, business operations, overseas client management, and commercial support.",
         skills: [
           "Cross-border communication",
           "Supplier/client coordination",
@@ -39,7 +39,7 @@ const CONTENT = {
         title: "Specialty Coffee",
         short: "Developed strong hands-on customer service, product knowledge, and high-standard service awareness.",
         expanded:
-          "Chao's specialty coffee experience strengthened his ability to serve customers face-to-face, explain complex products clearly, handle daily operations, and maintain quality under pressure. This gives him a grounded understanding of service, product experience, and customer trust.",
+          "My specialty coffee background strengthened my ability to serve customers face-to-face, explain complex products clearly, handle daily operations, and maintain quality under pressure. It gave me a grounded understanding of service standards, product experience, and earning customer trust.",
         skills: [
           "Customer-facing communication",
           "Product explanation",
@@ -63,7 +63,7 @@ const CONTENT = {
         title: "Client Experience & Operations",
         short: "Connects communication, process management, and service delivery across different working environments.",
         expanded:
-          "Across trade, coffee, and exhibition work, Chao has repeatedly played the role of a bridge between people, products, and workflows. This makes him suitable for roles that require communication, coordination, follow-up, and calm execution.",
+          "Across trade, coffee, and exhibition work, I've repeatedly played the role of a bridge between people, products, and workflows. This makes me well-suited for roles that require communication, coordination, follow-up, and calm execution under pressure.",
         skills: [
           "Stakeholder communication",
           "Process follow-up",
@@ -87,7 +87,7 @@ const CONTENT = {
         title: "AI / Vibe-Coding Projects",
         short: "Uses AI tools to build practical personal products, including this website and JD Matcher.",
         expanded:
-          "Chao is actively learning how to use AI tools to build working web products. This website and Recruiter Fit Report demonstrate curiosity, self-learning ability, and the ability to turn vague ideas into usable tools.",
+          "I'm actively using AI tools to build working web products — this website and the Recruiter Fit Report are the result. They demonstrate a willingness to learn quickly, experiment with new tools, and turn vague ideas into something concrete and usable.",
         skills: [
           "AI-assisted product building",
           "Prompt engineering",
@@ -118,7 +118,7 @@ const CONTENT = {
         title: "国际贸易",
         short: "具备跨境沟通、单证处理、供应商/客户协调与商务流程执行的扎实基础。",
         expanded:
-          "凭借国际贸易背景，积累了跨境业务、英语沟通，以及多方利益相关者协调的实战经验，适合 B2B 服务、商务运营、海外客户对接与商业支持类岗位。",
+          "凭借我的国际贸易背景，我积累了跨境业务、英语沟通以及多方利益相关者协调的实战经验，适合 B2B 服务、商务运营、海外客户对接与商业支持类岗位。",
         skills: ["跨境沟通", "供应商/客户协调", "单证处理", "商务英语", "跟进与执行"],
         roles: ["外贸专员", "商务运营助理", "客户成功专员", "销售运营支持"],
         skillsLabel: "技能",
@@ -130,7 +130,7 @@ const CONTENT = {
         title: "精品咖啡",
         short: "培养了面对面客户服务、产品讲解与高标准服务意识。",
         expanded:
-          "精品咖啡经历强化了他面对面服务客户、清晰讲解产品、处理日常运营并在压力下保持品质的能力，对服务、产品体验与客户信任有扎实理解。",
+          "精品咖啡经历强化了我面对面服务客户、清晰讲解产品、处理日常运营并在压力下保持品质的能力，我对服务标准、产品体验与客户信任有扎实认识。",
         skills: [
           "面对面客户沟通",
           "产品讲解",
@@ -149,7 +149,7 @@ const CONTENT = {
         title: "客户体验与运营",
         short: "连接沟通、流程管理与服务交付，贯穿多种工作场景。",
         expanded:
-          "在贸易、咖啡与展会支持等经历中，他多次扮演人、产品与流程之间的桥梁角色，适合需要沟通、协调、跟进与稳定执行的岗位。",
+          "在贸易、咖啡与展会支持等经历中，我多次担任人、产品与流程之间的桥梁，适合需要沟通、协调、跟进与稳定执行的岗位。",
         skills: ["利益相关者沟通", "流程跟进", "问题解决", "现场协调", "多语言支持", "服务意识"],
         roles: ["客户成功", "项目助理", "支持专员", "运营协调"],
         skillsLabel: "技能",
@@ -161,7 +161,7 @@ const CONTENT = {
         title: "AI / Vibe-Coding 项目",
         short: "使用 AI 工具构建实用个人产品，包括本网站与职位匹配报告。",
         expanded:
-          "刘超正在学习用 AI 工具构建可运行的 Web 产品。本网站与职位匹配报告体现了好奇心、自学能力，以及将模糊想法落地为可用工具的能力。",
+          "我正在用 AI 工具构建可运行的 Web 产品。本网站与职位匹配报告体现了好奇心、自学能力，以及将模糊想法落地为可用工具的能力。",
         skills: [
           "AI 辅助产品开发",
           "提示词工程",
