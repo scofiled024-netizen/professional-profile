@@ -93,3 +93,9 @@ server/               Optional local Express (not used on Vercel)
 attached_assets/      Profile photo
 public/               Resumes (resume-en.pdf, resume-zh.pdf)
 ```
+
+## Content sources
+
+- **Live website copy** is defined inline in `src/pages/Home.tsx` (`CONTENT` object).
+- `src/content/en.ts` and `src/content/zh.ts` mirror the same structure for type reference and future refactors; keep them in sync with `Home.tsx` experience entries when updating resume content.
+- **PDF paste-ready copy** for Apple Pages: `pdf-experience-copy.md`

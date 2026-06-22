@@ -275,7 +275,7 @@
 | **Location:** Shanghai | **Location:** 上海 |
 | Sole English-language contact for 5–25 overseas B2B clients across Alibaba International, Amazon, and Etsy. Managed the full order lifecycle, commercial documentation, and after-sales coordination independently. | 担任公司在阿里巴巴国际站、Amazon 及 Etsy 平台上 5 至 25 个海外 B2B 客户的唯一英语联络人，独立负责完整订单生命周期、商业单证及售后协调。 |
 
-### Entry 4 — Dianjing Training School
+### Entry 4 — Dianjing Training School *(synced 2026-06-22: Home.tsx, en.ts, zh.ts, Obsidian 工作画像, profile.md, chaoliu-introduce.txt)*
 | [EN] | [CN] |
 |------|------|
 | **Date:** Sep – Dec 2021 | **Date:** 2021年9月–12月 |

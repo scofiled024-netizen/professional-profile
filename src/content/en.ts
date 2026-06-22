@@ -104,6 +104,14 @@ const en: SiteContent = {
           "Sole English-language contact for 5–25 overseas B2B clients across Alibaba International, Amazon, and Etsy. Managed the full order lifecycle, commercial documentation, and after-sales coordination independently.",
       },
       {
+        date: "Sep – Dec 2021",
+        role: "English Language Instructor (Internship)",
+        company: "Dianjing Training School, Liuzhou",
+        location: "Liuzhou",
+        summary:
+          "Delivered English lessons to elementary, middle, and high school students. Broke down complex linguistic concepts for non-specialist learners and drew on a dual-degree English background to structure clear, accessible instruction.",
+      },
+      {
         date: "Apr – Jul 2021",
         role: "Operations & Customer Success Intern",
         company: "Yuanfudao",
