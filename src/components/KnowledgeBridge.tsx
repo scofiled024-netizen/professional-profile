@@ -14,7 +14,7 @@ const CONTENT = {
         badge: "B.A. · 2016–2020",
         knowledge:
           "International trade flows, commercial logic, and cross-border business context.",
-        applied: "JCBasic full-cycle orders, documentation, and platform operations.",
+        applied: "JCBasic full-cycle orders, Zoho CRM client and order tracking, documentation, and platform operations.",
         roles: "Trade client manager · International ops · B2B coordination",
         caseLabel: "Case 02 — JCBasic",
       },
@@ -56,7 +56,7 @@ const CONTENT = {
         title: "国际经济与贸易",
         badge: "本科 · 2016–2020",
         knowledge: "国际贸易流程、商业逻辑与跨境商务语境。",
-        applied: "JCBasic 全周期订单、单证处理与平台运营。",
+        applied: "JCBasic 全周期订单、Zoho CRM 客户与订单跟进、单证处理与平台运营。",
         roles: "外贸客户经理 · 国际业务协调 · B2B 运营",
         caseLabel: "案例 02 — JCBasic",
       },

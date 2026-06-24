@@ -40,18 +40,18 @@ const en: SiteContent = {
       },
       {
         num: "02",
-        title: "Full-Cycle Overseas B2B Client Management — English Only",
+        title: "Full-Cycle Overseas B2B Client Management",
         tag: "JCBasic · Shanghai Tingdi Accessories Co., Ltd.",
         context:
-          "At JCBasic, I was the sole English-language contact for managing overseas clients across Alibaba International, Amazon, and Etsy.",
+          "At JCBasic, I was the sole English-language contact for overseas clients across Alibaba International, Amazon, and Etsy, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
         responsibility:
           "I acted as the primary English-language contact for 5–25 active overseas B2B clients and managed orders throughout their lifecycle.",
         actions:
-          "Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up.",
+          "Tracked client records, pipeline, follow-ups, and order status in Zoho CRM. Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up.",
         results:
           "Managed orders from initial inquiry through delivery and payment follow-up. Maintained clear communication between overseas clients and internal teams. Reduced the need for customers to chase for updates.",
         skills:
-          "Order Management · Client Communication · Documentation · International Trade · Stakeholder Coordination",
+          "CRM (Zoho) · Order Management · Client Communication · Documentation · International Trade · Stakeholder Coordination",
       },
       {
         num: "03",

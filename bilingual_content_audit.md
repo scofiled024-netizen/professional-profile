@@ -220,13 +220,13 @@
 ### Card 02 — JCBasic
 | [EN] | [CN] |
 |------|------|
-| **H3:** Full-Cycle Overseas B2B Client Management — English Only | **H3:** 海外 B2B 客户全周期管理（全英文工作环境） |
+| **H3:** Full-Cycle Overseas B2B Client Management | **H3:** 海外 B2B 客户全周期管理 |
 | **Tag:** JCBasic · Shanghai Tingdi Accessories Co., Ltd. | **Tag:** JCBasic · 上海听谛服饰辅料有限公司 |
-| **Context:** At JCBasic, I was the sole English-language contact for managing overseas clients across Alibaba International, Amazon, and Etsy. | **Context:** 在 JCBasic，我负责通过阿里巴巴国际站、Amazon 及 Etsy 对接和管理海外客户，是团队唯一的英文客户联络人。 |
+| **Context:** At JCBasic, I was the sole English-language contact for overseas clients across Alibaba International, Amazon, and Etsy, using Zoho CRM as the primary system for client records, pipeline tracking, and order status. | **Context:** 在 JCBasic，我负责通过阿里巴巴国际站、Amazon 及 Etsy 对接海外客户，是团队唯一的英文客户联络人；以 Zoho CRM 作为主系统管理客户档案、销售跟进与订单状态。 |
 | **Responsibility:** I acted as the primary English-language contact for 5–25 active overseas B2B clients and managed orders throughout their lifecycle. | **Responsibility:** 作为 5 至 25 个活跃海外 B2B 客户的唯一英文联络人，全程独立管理订单生命周期。 |
-| **Actions:** Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up. | **Actions:** 响应询盘并出具报价；协调订单变更与生产进度；跟踪物流并及时同步客户状态；缮制合同、发票及装箱单；处理售后问题、客诉及应收款跟进。 |
+| **Actions:** Tracked client records, pipeline, follow-ups, and order status in Zoho CRM. Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up. | **Actions:** 在 Zoho CRM 中维护客户档案、销售跟进与订单状态。响应询盘并出具报价；协调订单变更与生产进度；跟踪物流并及时同步客户状态；缮制合同、发票及装箱单；处理售后问题、客诉及应收款跟进。 |
 | **Results:** Managed orders from initial inquiry through delivery and payment follow-up. Maintained clear communication between overseas clients and internal teams. Reduced the need for customers to chase for updates. | **Results:** 全程无需翻译协助，独立对接 5–25 位海外客户，未发生需升级处理的重大客诉。主动同步订单进度，减少客户反复催问，维持长期稳定合作。 |
-| **Skills:** Order Management · Client Communication · Documentation · International Trade · Stakeholder Coordination | **Skills:** 订单管理 · 客户沟通 · 单证处理 · 国际贸易 · 利益相关方协调 |
+| **Skills:** CRM (Zoho) · Order Management · Client Communication · Documentation · International Trade · Stakeholder Coordination | **Skills:** CRM（Zoho）· 订单管理 · 客户沟通 · 单证处理 · 国际贸易 · 利益相关方协调 |
 
 ### Card 03 — Manner Coffee × Lilith Games
 | [EN] | [CN] |

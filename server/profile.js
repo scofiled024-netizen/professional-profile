@@ -43,7 +43,7 @@ export const CANDIDATE_PROFILE = {
       foundation:
         "International trade flows, commercial logic, and cross-border business context.",
       appliedIn:
-        "JCBasic full-cycle B2B orders, documentation, Alibaba International / Amazon / Etsy operations",
+        "JCBasic full-cycle B2B orders, Zoho CRM client and order tracking, Alibaba International / Amazon / Etsy operations",
       connectsTo: "Trade client manager, international ops, B2B coordination",
       caseRef: "Selected Work 02 — JCBasic",
     },
@@ -86,15 +86,15 @@ export const CANDIDATE_PROFILE = {
       title: "Full-Cycle Overseas B2B Client Management",
       tag: "JCBasic · Shanghai Tingdi Accessories Co., Ltd.",
       context:
-        "Sole English-language contact for managing overseas clients across Alibaba International, Amazon, and Etsy.",
+        "Sole English-language contact for overseas clients across Alibaba International, Amazon, and Etsy, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
       responsibility:
         "Primary English-language contact for 5–25 active overseas B2B clients; managed orders throughout their lifecycle.",
       actions:
-        "Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up.",
+        "Tracked client records, pipeline, follow-ups, and order status in Zoho CRM. Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up.",
       results:
         "Managed orders from initial inquiry through delivery and payment follow-up. Maintained clear communication between overseas clients and internal teams. Reduced the need for customers to chase for updates.",
       skills:
-        "Order Management · Client Communication · Documentation · International Trade · Stakeholder Coordination",
+        "CRM (Zoho) · Order Management · Client Communication · Documentation · International Trade · Stakeholder Coordination",
     },
     {
       id: "03",
@@ -135,7 +135,7 @@ export const CANDIDATE_PROFILE = {
       period: "Mar 2022 – Apr 2023",
       location: "Shanghai",
       summary:
-        "Sole English-language contact for 5–25 overseas B2B clients on Alibaba International, Amazon, and Etsy. Full order lifecycle, commercial documentation, and after-sales coordination independently.",
+        "Sole English-language contact for 5–25 overseas B2B clients on Alibaba International, Amazon, and Etsy. Managed the full order lifecycle in Zoho CRM, plus commercial documentation and after-sales coordination independently.",
     },
     {
       role: "English Language Instructor (Internship)",
@@ -276,13 +276,14 @@ export const CANDIDATE_PROFILE = {
   capabilities: [
     "Bilingual and cross-cultural communication (written + live interpretation)",
     "B2B client and stakeholder coordination under pressure",
-    "International trade and order operations (Alibaba, Amazon, Etsy)",
+    "International trade and order operations (Alibaba, Amazon, Etsy, Zoho CRM)",
+    "CRM (Zoho) for B2B client and order lifecycle tracking",
     "Service delivery, issue resolution, and long-term account management",
     "Corporate event coordination and operational reporting",
     "Cross-cultural independence (solo international travel, on-site ownership)",
   ],
   honestGaps: [
-    "No formal CRM/Salesforce experience — client management done via email, Alibaba, and in-person channels",
+    "CRM experience limited to Zoho at JCBasic; no Salesforce or HubSpot experience",
     "Limited SaaS or tech-industry client success background",
     "No people-management or team-lead experience",
     "Communication/journalism knowledge from structured study (non-degree), not a graduate degree",
