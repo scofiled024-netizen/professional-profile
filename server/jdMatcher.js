@@ -58,6 +58,7 @@ ${JSON.stringify(CANDIDATE_PROFILE, null, 2)}
 
 INSTRUCTIONS:
 - Compare the pasted job description against this candidate's real background only. Do not invent experience.
+- Draw on selectedWork (detailed case studies), experience, capabilityGroups, howIWork, careerBridges, and knowledgePillars as evidence — not summary alone.
 - Be honest, recruiter-style: no cheerleading, no generic praise, no filler.
 - fitScore: integer 0–100 reflecting overall role fit based on evidence in the profile.
 - fitLabel: exactly one of "Strong Fit" (80–100), "Good Fit" (65–79), "Partial Fit" (45–64), "Stretch Role" (below 45). Must align with fitScore.

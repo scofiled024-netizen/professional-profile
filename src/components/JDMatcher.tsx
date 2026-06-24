@@ -44,7 +44,7 @@ const UI = {
     errors: {
       JD_TOO_SHORT: "Please paste a longer job description.",
       RATE_LIMIT: "Daily limit reached. Please try again tomorrow.",
-      MISSING_API_KEY: "JD Matcher is not configured yet.",
+      MISSING_API_KEY: "Add DEEPSEEK_API_KEY to .env in the project root, then restart npm run dev.",
       INVALID_API_KEY: "JD Matcher API key is invalid.",
       INSUFFICIENT_BALANCE: "DeepSeek account has insufficient balance. Top up at platform.deepseek.com.",
       NETWORK_ERROR: "Cannot reach DeepSeek API. Check your internet connection.",
@@ -77,7 +77,7 @@ const UI = {
     errors: {
       JD_TOO_SHORT: "请粘贴更完整的职位描述。",
       RATE_LIMIT: "今日分析次数已用完，请明天再试。",
-      MISSING_API_KEY: "职位匹配功能尚未配置。",
+      MISSING_API_KEY: "请在项目根目录 .env 中配置 DEEPSEEK_API_KEY，然后重启 npm run dev。",
       INVALID_API_KEY: "职位匹配 API 密钥无效。",
       INSUFFICIENT_BALANCE: "DeepSeek 账户余额不足，请前往 platform.deepseek.com 充值。",
       NETWORK_ERROR: "无法连接 DeepSeek 服务，请检查网络。",

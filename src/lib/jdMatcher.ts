@@ -28,19 +28,30 @@ export async function analyzeJobDescription(
     throw new Error("JD_TOO_SHORT");
   }
 
-  const response = await fetch("/api/jd-match", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ jobDescription: trimmed, outputLang }),
-  });
-
-  const data = (await response.json()) as FitReportResult & { error?: string };
-
-  if (!response.ok) {
-    throw new Error(data.error ?? "API_ERROR");
+  let response: Response;
+  try {
+    response = await fetch("/api/jd-match", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ jobDescription: trimmed, outputLang }),
+    });
+  } catch {
+    throw new Error("NETWORK_ERROR");
   }
 
-  if (!data.fitScore || !data.recruiterSummary) {
+  const raw = await response.text();
+  let data: (FitReportResult & { error?: string }) | null = null;
+  try {
+    data = raw ? (JSON.parse(raw) as FitReportResult & { error?: string }) : null;
+  } catch {
+    throw new Error(response.ok ? "API_ERROR" : "API_ERROR");
+  }
+
+  if (!response.ok) {
+    throw new Error(data?.error ?? "API_ERROR");
+  }
+
+  if (!data || data.fitScore == null || !data.recruiterSummary) {
     throw new Error("API_ERROR");
   }
 
