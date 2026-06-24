@@ -43,9 +43,9 @@ const en: SiteContent = {
         title: "Full-Cycle Overseas B2B Client Management",
         tag: "JCBasic · Shanghai Tingdi Accessories Co., Ltd.",
         context:
-          "At JCBasic, I was the sole English-language contact for overseas clients across Alibaba International, Amazon, and Etsy, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
+          "At JCBasic, I was the sole English-language contact for overseas clients across Alibaba International, Etsy and brand website, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
         responsibility:
-          "I acted as the primary English-language contact for 5–25 active overseas B2B clients and managed orders throughout their lifecycle.",
+          "I acted as the primary English-language contact for overseas B2B clients and managed orders throughout their lifecycle.",
         actions:
           "Tracked client records, pipeline, follow-ups, and order status in Zoho CRM. Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up.",
         results:
@@ -101,11 +101,11 @@ const en: SiteContent = {
         company: "JCBasic (上海听谛服饰辅料有限公司)",
         location: "Shanghai",
         summary:
-          "Sole English-language contact for 5–25 overseas B2B clients across Alibaba International, Amazon, and Etsy. Managed the full order lifecycle, commercial documentation, and after-sales coordination independently.",
+          "Sole English-language contact for overseas B2B clients on Alibaba International, Etsy and brand website. Managed the full order lifecycle in Zoho CRM, plus commercial documentation and after-sales coordination independently.",
       },
       {
         date: "Sep – Dec 2021",
-        role: "English Language Instructor (Internship)",
+        role: "English Language Instructor",
         company: "Dianjing Training School, Liuzhou",
         location: "Liuzhou",
         summary:
@@ -130,7 +130,7 @@ const en: SiteContent = {
       },
       {
         name: "International Trade and Order Operations",
-        desc: "End-to-end order management across international platforms including Alibaba International, Amazon, and Etsy. Commercial documentation, shipment tracking, and receivables follow-up.",
+        desc: "End-to-end order management across international platforms including Alibaba International, Etsy and brand website. Commercial documentation, shipment tracking, and receivables follow-up.",
       },
       {
         name: "Bilingual and Cross-Cultural Communication",
@@ -145,7 +145,7 @@ const en: SiteContent = {
   about: {
     title: "About",
     text: [
-      "My career has moved across international trade documentation, specialty coffee, corporate service operations, and live exhibition sales. These look like different industries — and they are. But the work in each has been fundamentally the same: understanding what someone needs, communicating it accurately, and making sure things move forward.",
+      "My career has moved across international trade, specialty coffee, corporate service operations, and live exhibition sales. These look like different industries — and they are. But the work in each has been fundamentally the same: understanding what someone needs, communicating it accurately, and making sure things move forward.",
       "I am drawn to roles where the gap between what is said and what is understood actually matters. Where a poorly translated email causes a delayed shipment. Where a client's frustration, handled well, becomes a reason to stay. Where being the only bilingual person in the room is an opportunity, not a burden.",
       "Outside of work, I think carefully about how things are communicated — tone, precision, what gets left out. I believe calm, clear communication is a skill worth taking seriously.",
     ],

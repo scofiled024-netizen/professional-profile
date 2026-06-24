@@ -100,7 +100,7 @@ export default function KnowledgeBridge({ lang, onNavigate }: KnowledgeBridgePro
     <section id="knowledge" className="scroll-mt-32" aria-labelledby="knowledge-heading">
       <h2
         id="knowledge-heading"
-        className="text-sm uppercase tracking-widest text-muted-foreground mb-4 border-b border-border pb-4 font-medium"
+        className="text-sm uppercase tracking-widest text-muted-foreground mb-16 border-b border-border pb-4 font-medium"
       >
         {c.title}
       </h2>

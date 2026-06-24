@@ -33,7 +33,7 @@ export const CANDIDATE_PROFILE = {
     "Handled international B2B clients entirely in English without backup (JCBasic, 5–25 active clients)",
   ],
   about: [
-    "Career spans international trade documentation, specialty coffee, corporate service operations, and live exhibition sales. Across industries, the work has been fundamentally the same: understanding what someone needs, communicating it accurately, and making sure things move forward.",
+    "Career spans international trade, specialty coffee, corporate service operations, and live exhibition sales. Across industries, the work has been fundamentally the same: understanding what someone needs, communicating it accurately, and making sure things move forward.",
     "Drawn to roles where the gap between what is said and what is understood actually matters — where a poorly translated email causes a delayed shipment, where a client's frustration handled well becomes a reason to stay, and where being the only bilingual person in the room is an opportunity, not a burden.",
     "Two years of structured study in international journalism and communication reinforced a focus on tone, precision, and calm, clear communication.",
   ],
@@ -43,7 +43,7 @@ export const CANDIDATE_PROFILE = {
       foundation:
         "International trade flows, commercial logic, and cross-border business context.",
       appliedIn:
-        "JCBasic full-cycle B2B orders, Zoho CRM client and order tracking, Alibaba International / Amazon / Etsy operations",
+        "JCBasic full-cycle B2B orders, Zoho CRM client and order tracking, Alibaba International / Etsy / brand website operations",
       connectsTo: "Trade client manager, international ops, B2B coordination",
       caseRef: "Selected Work 02 — JCBasic",
     },
@@ -86,9 +86,9 @@ export const CANDIDATE_PROFILE = {
       title: "Full-Cycle Overseas B2B Client Management",
       tag: "JCBasic · Shanghai Tingdi Accessories Co., Ltd.",
       context:
-        "Sole English-language contact for overseas clients across Alibaba International, Amazon, and Etsy, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
+        "Sole English-language contact for overseas clients across Alibaba International, Etsy and brand website, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
       responsibility:
-        "Primary English-language contact for 5–25 active overseas B2B clients; managed orders throughout their lifecycle.",
+        "Primary English-language contact for overseas B2B clients; managed orders throughout their lifecycle.",
       actions:
         "Tracked client records, pipeline, follow-ups, and order status in Zoho CRM. Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up.",
       results:
@@ -135,10 +135,10 @@ export const CANDIDATE_PROFILE = {
       period: "Mar 2022 – Apr 2023",
       location: "Shanghai",
       summary:
-        "Sole English-language contact for 5–25 overseas B2B clients on Alibaba International, Amazon, and Etsy. Managed the full order lifecycle in Zoho CRM, plus commercial documentation and after-sales coordination independently.",
+        "Sole English-language contact for overseas B2B clients on Alibaba International, Etsy and brand website. Managed the full order lifecycle in Zoho CRM, plus commercial documentation and after-sales coordination independently.",
     },
     {
-      role: "English Language Instructor (Internship)",
+      role: "English Language Instructor",
       company: "Dianjing Training School",
       period: "Sep – Dec 2021",
       location: "Liuzhou",
@@ -161,7 +161,7 @@ export const CANDIDATE_PROFILE = {
     },
     {
       name: "International Trade and Order Operations",
-      desc: "End-to-end order management across Alibaba International, Amazon, and Etsy. Commercial documentation, shipment tracking, and receivables follow-up.",
+      desc: "End-to-end order management across Alibaba International, Etsy and brand website. Commercial documentation, shipment tracking, and receivables follow-up.",
     },
     {
       name: "Bilingual and Cross-Cultural Communication",
@@ -276,7 +276,7 @@ export const CANDIDATE_PROFILE = {
   capabilities: [
     "Bilingual and cross-cultural communication (written + live interpretation)",
     "B2B client and stakeholder coordination under pressure",
-    "International trade and order operations (Alibaba, Amazon, Etsy, Zoho CRM)",
+    "International trade and order operations (Alibaba International, Etsy, brand website, Zoho CRM)",
     "CRM (Zoho) for B2B client and order lifecycle tracking",
     "Service delivery, issue resolution, and long-term account management",
     "Corporate event coordination and operational reporting",

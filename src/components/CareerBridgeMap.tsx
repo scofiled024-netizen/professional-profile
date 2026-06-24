@@ -87,7 +87,7 @@ const CONTENT = {
         title: "AI / Vibe-Coding Projects",
         short: "Uses AI tools to build practical personal products, including this website and JD Matcher.",
         expanded:
-          "I'm actively using AI tools to build working web products — this website and the Recruiter Fit Report are the result. They demonstrate a willingness to learn quickly, experiment with new tools, and turn vague ideas into something concrete and usable.",
+          "Uses AI tools to build working web products — this website and the Recruiter Fit Report demonstrate a willingness to learn quickly, experiment with new tools, and turn vague ideas into something concrete and usable.",
         skills: [
           "AI-assisted product building",
           "Prompt engineering",
@@ -161,7 +161,7 @@ const CONTENT = {
         title: "AI / Vibe-Coding 项目",
         short: "使用 AI 工具构建实用个人产品，包括本网站与职位匹配报告。",
         expanded:
-          "我正在用 AI 工具构建可运行的 Web 产品。本网站与职位匹配报告体现了好奇心、自学能力，以及将模糊想法落地为可用工具的能力。",
+          "使用 AI 工具构建可运行的 Web 产品。本网站与职位匹配报告体现了好奇心、自学能力，以及将模糊想法落地为可用工具的能力。",
         skills: [
           "AI 辅助产品开发",
           "提示词工程",
@@ -200,7 +200,7 @@ export default function CareerBridgeMap({ lang }: CareerBridgeMapProps) {
     <section id="bridge" className="scroll-mt-32" aria-labelledby="bridge-heading">
       <h2
         id="bridge-heading"
-        className="text-sm uppercase tracking-widest text-muted-foreground mb-4 border-b border-border pb-4 font-medium"
+        className="text-sm uppercase tracking-widest text-muted-foreground mb-16 border-b border-border pb-4 font-medium"
       >
         {c.title}
       </h2>

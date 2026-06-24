@@ -27,10 +27,10 @@ After pasting, export PDFs and replace:
 ### Foreign Trade Specialist & International Client Manager
 **JCBasic (Shanghai Tingdi Accessories Co., Ltd.) | Mar 2022 – Apr 2023 | Shanghai**
 
-- Sole English-language contact for 5–25 overseas B2B clients across Alibaba International, Amazon, and Etsy; managed the full order lifecycle in **Zoho CRM** (client records, pipeline, follow-ups, and order status).
+- Sole English-language contact for 5–25 overseas B2B clients across Alibaba International, Etsy and brand website; managed the full order lifecycle in **Zoho CRM** (client records, pipeline, follow-ups, and order status).
 - Prepared contracts, invoices, packing lists, and bilingual business documents; handled after-sales issues and payment follow-up alongside platform messaging and email.
 
-### English Language Instructor (Internship)
+### English Language Instructor
 **Dianjing Training School, Liuzhou | Sep – Dec 2021 | Liuzhou, Guangxi**
 
 Delivered English lessons to elementary, middle, and high school students. Broke down complex linguistic concepts for non-specialist learners and drew on a dual-degree English background to structure clear, accessible instruction.
@@ -60,11 +60,11 @@ Delivered English lessons to elementary, middle, and high school students. Broke
 ### JCBasic 上海听谛服饰辅料有限公司
 **外贸专员 & 国际客户经理 | 2022年3月–2023年4月 | 上海**
 
-- 全英文独立对接 5–25 个海外 B2B 客户（阿里巴巴国际站、Amazon、Etsy）；以 **Zoho CRM** 作为主系统管理客户档案、销售跟进、订单状态与全周期交付。
+- 全英文独立对接海外 B2B 客户（阿里巴巴国际站、Etsy、品牌官网）；以 **Zoho CRM** 作为主系统管理客户档案、销售跟进、订单状态与全周期交付。
 - 缮制合同、发票、装箱单等外贸单证，配合平台沟通与邮件处理售后及应收款跟进。
 
 ### 柳州点睛培训学校
-**英语教师（实习） | 2021年9月–12月 | 广西柳州**
+**英语教师 | 2021年9月–12月 | 广西柳州**
 
 为中小学各学段授课，将复杂语言知识转化为易懂表达，并结合英语双学位背景设计清晰、可跟上的课程。
 

@@ -176,7 +176,7 @@
 |------|------|
 | **H3:** AI / Vibe-Coding Projects | **H3:** AI / Vibe-Coding 项目 |
 | Uses AI tools to build practical personal products, including this website and JD Matcher. | 使用 AI 工具构建实用个人产品，包括本网站与职位匹配报告。 |
-| I'm actively using AI tools to build working web products — this website and the Recruiter Fit Report are the result. They demonstrate a willingness to learn quickly, experiment with new tools, and turn vague ideas into something concrete and usable. | 我正在用 AI 工具构建可运行的 Web 产品。本网站与职位匹配报告体现了好奇心、自学能力，以及将模糊想法落地为可用工具的能力。 |
+| Uses AI tools to build working web products — this website and the Recruiter Fit Report demonstrate a willingness to learn quickly, experiment with new tools, and turn vague ideas into something concrete and usable. | 使用 AI 工具构建可运行的 Web 产品。本网站与职位匹配报告体现了好奇心、自学能力，以及将模糊想法落地为可用工具的能力。 |
 | AI-assisted product building | AI 辅助产品开发 |
 | Prompt engineering | 提示词工程 |
 | Website iteration | 网站迭代 |
@@ -222,10 +222,10 @@
 |------|------|
 | **H3:** Full-Cycle Overseas B2B Client Management | **H3:** 海外 B2B 客户全周期管理 |
 | **Tag:** JCBasic · Shanghai Tingdi Accessories Co., Ltd. | **Tag:** JCBasic · 上海听谛服饰辅料有限公司 |
-| **Context:** At JCBasic, I was the sole English-language contact for overseas clients across Alibaba International, Amazon, and Etsy, using Zoho CRM as the primary system for client records, pipeline tracking, and order status. | **Context:** 在 JCBasic，我负责通过阿里巴巴国际站、Amazon 及 Etsy 对接海外客户，是团队唯一的英文客户联络人；以 Zoho CRM 作为主系统管理客户档案、销售跟进与订单状态。 |
-| **Responsibility:** I acted as the primary English-language contact for 5–25 active overseas B2B clients and managed orders throughout their lifecycle. | **Responsibility:** 作为 5 至 25 个活跃海外 B2B 客户的唯一英文联络人，全程独立管理订单生命周期。 |
+| **Context:** At JCBasic, I was the sole English-language contact for overseas clients across Alibaba International, Etsy and brand website, using Zoho CRM as the primary system for client records, pipeline tracking, and order status. | **Context:** 在 JCBasic，我负责通过阿里巴巴国际站、Etsy 及品牌官网对接海外客户，是团队唯一的英文客户联络人；以 Zoho CRM 作为主系统管理客户档案、销售跟进与订单状态。 |
+| **Responsibility:** I acted as the primary English-language contact for overseas B2B clients and managed orders throughout their lifecycle. | **Responsibility:** 作为海外 B2B 客户的唯一英文联络人，全程独立管理订单生命周期。 |
 | **Actions:** Tracked client records, pipeline, follow-ups, and order status in Zoho CRM. Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up. | **Actions:** 在 Zoho CRM 中维护客户档案、销售跟进与订单状态。响应询盘并出具报价；协调订单变更与生产进度；跟踪物流并及时同步客户状态；缮制合同、发票及装箱单；处理售后问题、客诉及应收款跟进。 |
-| **Results:** Managed orders from initial inquiry through delivery and payment follow-up. Maintained clear communication between overseas clients and internal teams. Reduced the need for customers to chase for updates. | **Results:** 全程无需翻译协助，独立对接 5–25 位海外客户，未发生需升级处理的重大客诉。主动同步订单进度，减少客户反复催问，维持长期稳定合作。 |
+| **Results:** Managed orders from initial inquiry through delivery and payment follow-up. Maintained clear communication between overseas clients and internal teams. Reduced the need for customers to chase for updates. | **Results:** 全程无需翻译协助，独立对接海外客户，未发生需升级处理的重大客诉。主动同步订单进度，减少客户反复催问，维持长期稳定合作。 |
 | **Skills:** CRM (Zoho) · Order Management · Client Communication · Documentation · International Trade · Stakeholder Coordination | **Skills:** CRM（Zoho）· 订单管理 · 客户沟通 · 单证处理 · 国际贸易 · 利益相关方协调 |
 
 ### Card 03 — Manner Coffee × Lilith Games
@@ -273,13 +273,13 @@
 | **Role:** Foreign Trade Specialist & International Client Manager | **Role:** 外贸专员 & 国际客户经理 |
 | **Company:** JCBasic (上海听谛服饰辅料有限公司) | **Company:** JCBasic（上海听谛服饰辅料有限公司）|
 | **Location:** Shanghai | **Location:** 上海 |
-| Sole English-language contact for 5–25 overseas B2B clients across Alibaba International, Amazon, and Etsy. Managed the full order lifecycle, commercial documentation, and after-sales coordination independently. | 担任公司在阿里巴巴国际站、Amazon 及 Etsy 平台上 5 至 25 个海外 B2B 客户的唯一英语联络人，独立负责完整订单生命周期、商业单证及售后协调。 |
+| Sole English-language contact for overseas B2B clients on Alibaba International, Etsy and brand website. Managed the full order lifecycle in Zoho CRM, plus commercial documentation and after-sales coordination independently. | 担任阿里巴巴国际站、Etsy 及品牌官网上的海外 B2B 客户的唯一英语联络人；以 Zoho CRM 管理客户档案、销售跟进与订单状态，独立负责商业单证及售后协调。 |
 
 ### Entry 4 — Dianjing Training School *(synced 2026-06-22: Home.tsx, en.ts, zh.ts, Obsidian 工作画像, profile.md, chaoliu-introduce.txt)*
 | [EN] | [CN] |
 |------|------|
 | **Date:** Sep – Dec 2021 | **Date:** 2021年9月–12月 |
-| **Role:** English Language Instructor (Internship) | **Role:** 英语教师（实习） |
+| **Role:** English Language Instructor | **Role:** 英语教师 |
 | **Company:** Dianjing Training School, Liuzhou | **Company:** 柳州点睛培训学校 |
 | **Location:** Liuzhou, Guangxi | **Location:** 广西柳州 |
 | Delivered English lessons to elementary, middle, and high school students. Broke down complex linguistic concepts for non-specialist learners and drew on a dual-degree English background to structure clear, accessible instruction. | 为中小学各学段授课，将复杂语言知识转化为易懂表达，并结合英语双学位背景设计清晰、可跟上的课程。 |
@@ -312,7 +312,7 @@
 | [EN] | [CN] |
 |------|------|
 | **H3:** International Trade and Order Operations | **H3:** 国际贸易与订单运营 |
-| End-to-end order management across international platforms including Alibaba International, Amazon, and Etsy. Commercial documentation, shipment tracking, and receivables follow-up. | 跨平台（阿里巴巴国际站、Amazon、Etsy）的全周期订单管理，涵盖商业单证、发货追踪及应收款跟进。 |
+| End-to-end order management across international platforms including Alibaba International, Etsy and brand website. Commercial documentation, shipment tracking, and receivables follow-up. | 跨平台（阿里巴巴国际站、Etsy、品牌官网）的全周期订单管理，涵盖商业单证、发货追踪及应收款跟进。 |
 
 ### Group 3
 | [EN] | [CN] |
@@ -428,9 +428,9 @@
 | About | 关于我 |
 
 ### Paragraph 1
-> **[EN]** My career has moved across international trade documentation, specialty coffee, corporate service operations, and live exhibition sales. These look like different industries — and they are. But the work in each has been fundamentally the same: understanding what someone needs, communicating it accurately, and making sure things move forward.
+> **[EN]** My career has moved across international trade, specialty coffee, corporate service operations, and live exhibition sales. These look like different industries — and they are. But the work in each has been fundamentally the same: understanding what someone needs, communicating it accurately, and making sure things move forward.
 
-> **[CN]** 我的职业经历横跨国际贸易单证、精品咖啡、企业服务运营和现场展会销售。这些经历分属不同行业，确实如此；但每份工作的内核始终如一：理解对方需求，精准传达信息，并确保事情向前推进。
+> **[CN]** 我的职业经历横跨国际贸易、精品咖啡、企业服务运营和现场展会销售。这些经历分属不同行业，确实如此；但每份工作的内核始终如一：理解对方需求，精准传达信息，并确保事情向前推进。
 
 ### Paragraph 2
 > **[EN]** I am drawn to roles where the gap between what is said and what is understood actually matters. Where a poorly translated email causes a delayed shipment. Where a client's frustration, handled well, becomes a reason to stay. Where being the only bilingual person in the room is an opportunity, not a burden.

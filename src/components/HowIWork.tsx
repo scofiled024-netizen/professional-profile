@@ -72,7 +72,7 @@ export default function HowIWork({ lang }: HowIWorkProps) {
     <section id="how-i-work" className="scroll-mt-32" aria-labelledby="how-i-work-heading">
       <h2
         id="how-i-work-heading"
-        className="text-sm uppercase tracking-widest text-muted-foreground mb-4 border-b border-border pb-4 font-medium"
+        className="text-sm uppercase tracking-widest text-muted-foreground mb-16 border-b border-border pb-4 font-medium"
       >
         {c.title}
       </h2>

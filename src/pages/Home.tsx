@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Mail, Linkedin, ArrowUp, Sun, Moon, Download, Menu, X } from "lucide-react";
 import { useTheme } from "@/components/ThemeProvider";
@@ -7,6 +7,16 @@ import CareerBridgeMap from "@/components/CareerBridgeMap";
 import KnowledgeBridge from "@/components/KnowledgeBridge";
 import HowIWork from "@/components/HowIWork";
 import photoSrc from "@assets/profile-photo.jpg";
+import tfsuLogoSrc from "@assets/tfsu-logo.png";
+import dianjingLogoSrc from "@assets/dianjing-logo.png";
+import hotelexLogoSrc from "@assets/hotelex-logo.png";
+import yuanfudaoLogoSrc from "@assets/yuanfudao-logo.png";
+import mannerLogoSrc from "@assets/manner-logo.png";
+import lilithGamesLogoSrc from "@assets/lilith-games-logo.png";
+import jcbasicLogoSrc from "@assets/jcbasic-logo.png";
+
+const experienceLogoClass =
+  "size-[3.025rem] shrink-0 rounded-md object-contain ring-1 ring-border/50 bg-white";
 
 type Lang = "en" | "zh";
 
@@ -49,8 +59,8 @@ const CONTENT = {
           num: "02",
           title: "Full-Cycle Overseas B2B Client Management",
           tag: "JCBasic · Shanghai Tingdi Accessories Co., Ltd.",
-          context: "At JCBasic, I was the sole English-language contact for overseas clients across Alibaba International, Amazon, and Etsy, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
-          responsibility: "I acted as the primary English-language contact for 5–25 active overseas B2B clients and managed orders throughout their lifecycle.",
+          context: "At JCBasic, I was the sole English-language contact for overseas clients across Alibaba International, Etsy and brand website, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
+          responsibility: "I acted as the primary English-language contact for overseas B2B clients and managed orders throughout their lifecycle.",
           actions: "Tracked client records, pipeline, follow-ups, and order status in Zoho CRM. Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up.",
           results: "Managed orders from initial inquiry through delivery and payment follow-up. Maintained clear communication between overseas clients and internal teams. Reduced the need for customers to chase for updates.",
           skills: "CRM (Zoho) · Order Management · Client Communication · Documentation · International Trade · Stakeholder Coordination",
@@ -81,6 +91,7 @@ const CONTENT = {
           role: "Bilingual Brand Representative & On-Site Sales",
           company: "Panda Bear Express (ICOSA Brewhouse & Biru Roast)",
           location: "Shanghai",
+          logo: hotelexLogoSrc,
           summary: "Sole bilingual representative at HOTELEX Shanghai 2026, managing all client-facing operations for two international specialty coffee brands across a four-day trade expo. Delivered real-time English-Chinese interpretation for brand directors and closed 150+ transactions independently.",
         },
         {
@@ -88,6 +99,7 @@ const CONTENT = {
           role: "Senior Barista & Corporate Client Liaison",
           company: "Manner Coffee × Lilith Games",
           location: "Shanghai",
+          logos: [mannerLogoSrc, lilithGamesLogoSrc],
           summary: "Primary service contact between Manner Coffee and Lilith Games' corporate administration team across two campus locations. Managed daily client communication, event coordination, and operational records for a 300–400 person daily client base over nearly three years.",
         },
         {
@@ -95,13 +107,15 @@ const CONTENT = {
           role: "Foreign Trade Specialist & International Client Manager",
           company: "JCBasic (上海听谛服饰辅料有限公司)",
           location: "Shanghai",
-          summary: "Sole English-language contact for 5–25 overseas B2B clients on Alibaba International, Amazon, and Etsy. Managed the full order lifecycle in Zoho CRM, plus commercial documentation and after-sales coordination independently.",
+          logo: jcbasicLogoSrc,
+          summary: "Sole English-language contact for overseas B2B clients on Alibaba International, Etsy and brand website. Managed the full order lifecycle in Zoho CRM, plus commercial documentation and after-sales coordination independently.",
         },
         {
           date: "Sep – Dec 2021",
-          role: "English Language Instructor (Internship)",
+          role: "English Language Instructor",
           company: "Dianjing Training School, Liuzhou",
           location: "Liuzhou",
+          logo: dianjingLogoSrc,
           summary: "Delivered English lessons to elementary, middle, and high school students. Broke down complex linguistic concepts for non-specialist learners and drew on a dual-degree English background to structure clear, accessible instruction.",
         },
         {
@@ -109,6 +123,7 @@ const CONTENT = {
           role: "Operations & Customer Success Intern",
           company: "Yuanfudao",
           location: "Changsha",
+          logo: yuanfudaoLogoSrc,
           summary: "Managed online user communities of 200+ members, supported sales conversions, and handled administrative operations in a fast-paced digital education environment.",
         },
       ],
@@ -122,7 +137,7 @@ const CONTENT = {
         },
         {
           name: "International Trade and Order Operations",
-          desc: "End-to-end order management across international platforms including Alibaba International, Amazon, and Etsy. Commercial documentation, shipment tracking, and receivables follow-up.",
+          desc: "End-to-end order management across international platforms including Alibaba International, Etsy and brand website. Commercial documentation, shipment tracking, and receivables follow-up.",
         },
         {
           name: "Bilingual and Cross-Cultural Communication",
@@ -137,9 +152,18 @@ const CONTENT = {
     about: {
       title: "About",
       text: [
-        "My career has moved across international trade documentation, specialty coffee, corporate service operations, and live exhibition sales. These look like different industries — and they are. But the work in each has been fundamentally the same: understanding what someone needs, communicating it accurately, and making sure things move forward.",
-        "I am drawn to roles where the gap between what is said and what is understood actually matters. Where a poorly translated email causes a delayed shipment. Where a client's frustration, handled well, becomes a reason to stay. Where being the only bilingual person in the room is an opportunity, not a burden.",
-        "Outside of work, I think carefully about how things are communicated — tone, precision, what gets left out. Two years of structured study in international journalism and communication further reinforced this communication instinct. I believe calm, clear communication is a skill worth taking seriously.",
+        <>
+          My career has moved across international trade, specialty coffee, corporate service operations, and live exhibition sales. These look like different industries — and they are. But the work in each has been fundamentally the same:{" "}
+          <span className="font-semibold italic">understanding what someone needs, communicating it accurately, and making sure things move forward.</span>
+        </>,
+        <>
+          I am drawn to roles where the gap between what is said and what is understood actually matters. Where a poorly translated email causes a delayed shipment. Where a client's frustration, handled well, becomes a reason to stay.{" "}
+          <span className="font-semibold italic">Where being the only bilingual person in the room is an opportunity, not a burden.</span>
+        </>,
+        <>
+          Outside of work, I think carefully about how things are communicated — tone, precision, what gets left out. Two years of structured study in international journalism and communication further reinforced this communication instinct. I believe{" "}
+          <span className="font-semibold italic">calm, clear communication is a skill worth taking seriously.</span>
+        </>,
       ],
     },
     education: {
@@ -201,10 +225,10 @@ const CONTENT = {
           num: "02",
           title: "海外 B2B 客户全周期管理",
           tag: "JCBasic · 上海听谛服饰辅料有限公司",
-          context: "在 JCBasic，我负责通过阿里巴巴国际站、Amazon 及 Etsy 对接海外客户，是团队唯一的英文客户联络人；以 Zoho CRM 作为主系统管理客户档案、销售跟进与订单状态。",
-          responsibility: "作为 5 至 25 个活跃海外 B2B 客户的唯一英文联络人，全程独立管理订单生命周期。",
+          context: "在 JCBasic，我负责通过阿里巴巴国际站、Etsy 及品牌官网对接海外客户，是团队唯一的英文客户联络人；以 Zoho CRM 作为主系统管理客户档案、销售跟进与订单状态。",
+          responsibility: "作为海外 B2B 客户的唯一英文联络人，全程独立管理订单生命周期。",
           actions: "在 Zoho CRM 中维护客户档案、销售跟进与订单状态。响应询盘并出具报价；协调订单变更与生产进度；跟踪物流并及时同步客户状态；缮制合同、发票及装箱单；处理售后问题、客诉及应收款跟进。",
-          results: "全程无需翻译协助，独立对接 5–25 位海外客户，未发生需升级处理的重大客诉。主动同步订单进度，减少客户反复催问，维持长期稳定合作。",
+          results: "全程无需翻译协助，独立对接海外客户，未发生需升级处理的重大客诉。主动同步订单进度，减少客户反复催问，维持长期稳定合作。",
           skills: "CRM（Zoho）· 订单管理 · 客户沟通 · 单证处理 · 国际贸易 · 利益相关方协调",
         },
         {
@@ -233,6 +257,7 @@ const CONTENT = {
           role: "双语品牌代表 & 现场销售",
           company: "Panda Bear Express（ICOSA Brewhouse & Biru Roast）",
           location: "上海",
+          logo: hotelexLogoSrc,
           summary: "作为 HOTELEX 上海国际酒店餐饮展 2026 的唯一双语代表，全面负责两个国际精品咖啡品牌的所有客户对接工作。为品牌总监提供实时英中口译，独立完成 150 多笔交易。",
         },
         {
@@ -240,6 +265,7 @@ const CONTENT = {
           role: "高级咖啡师 / 企业客户对接人",
           company: "Manner Coffee × 莉莉丝游戏",
           location: "上海",
+          logos: [mannerLogoSrc, lilithGamesLogoSrc],
           summary: "担任 Manner Coffee 与莉莉丝游戏行政团队之间的主要服务联络人，横跨两个园区。近三年负责日常客户沟通、活动协调及 300 至 400 人规模客户群体的运营记录维护。",
         },
         {
@@ -247,13 +273,15 @@ const CONTENT = {
           role: "外贸专员 & 国际客户经理",
           company: "JCBasic（上海听谛服饰辅料有限公司）",
           location: "上海",
-          summary: "担任阿里巴巴国际站、Amazon 及 Etsy 上 5 至 25 个海外 B2B 客户的唯一英语联络人；以 Zoho CRM 管理客户档案、销售跟进与订单状态，独立负责商业单证及售后协调。",
+          logo: jcbasicLogoSrc,
+          summary: "担任阿里巴巴国际站、Etsy 及品牌官网上的海外 B2B 客户的唯一英语联络人；以 Zoho CRM 管理客户档案、销售跟进与订单状态，独立负责商业单证及售后协调。",
         },
         {
           date: "2021年9月–12月",
-          role: "英语教师（实习）",
+          role: "英语教师",
           company: "柳州点睛培训学校",
           location: "柳州",
+          logo: dianjingLogoSrc,
           summary: "为中小学各学段授课，将复杂语言知识转化为易懂表达，并结合英语双学位背景设计清晰、可跟上的课程。",
         },
         {
@@ -261,6 +289,7 @@ const CONTENT = {
           role: "运营与客户成功实习生",
           company: "猿辅导",
           location: "长沙",
+          logo: yuanfudaoLogoSrc,
           summary: "管理 200 余人的线上用户社群，协助销售转化，在快节奏数字教育环境中处理行政运营工作。",
         },
       ],
@@ -274,7 +303,7 @@ const CONTENT = {
         },
         {
           name: "国际贸易与订单运营",
-          desc: "跨平台（阿里巴巴国际站、Amazon、Etsy）的全周期订单管理，涵盖商业单证、发货追踪及应收款跟进。",
+          desc: "跨平台（阿里巴巴国际站、Etsy、品牌官网）的全周期订单管理，涵盖商业单证、发货追踪及应收款跟进。",
         },
         {
           name: "双语与跨文化沟通",
@@ -289,9 +318,18 @@ const CONTENT = {
     about: {
       title: "关于我",
       text: [
-        "我的职业经历横跨国际贸易单证、精品咖啡、企业服务运营和现场展会销售。这些经历分属不同行业，确实如此；但每份工作的内核始终如一：理解对方需求，精准传达信息，并确保事情向前推进。",
-        "我倾向于选择那些「表达」与「理解」之间的落差会产生实质影响的岗位。在这样的角色中，一封翻译不当的邮件会导致发货延迟；一次妥善处理的客户不满，能成为客户留下的理由；而成为现场唯一的双语沟通者，是一种机遇，而非负担。",
-        "工作之余，我会审慎思考信息的传递方式——语气、精准度，以及那些被省略的内容。两年国际新闻与传播方向的系统学习，进一步强化了这种沟通意识。我相信，冷静而清晰的沟通，是一项值得认真对待的能力。",
+        <>
+          我的职业经历横跨国际贸易、精品咖啡、企业服务运营和现场展会销售。这些经历分属不同行业，确实如此；但每份工作的内核始终如一：
+          <span className="font-semibold italic">理解对方需求，精准传达信息，并确保事情向前推进。</span>
+        </>,
+        <>
+          我倾向于选择那些「表达」与「理解」之间的落差会产生实质影响的岗位。在这样的角色中，一封翻译不当的邮件会导致发货延迟；一次妥善处理的客户不满，能成为客户留下的理由；
+          <span className="font-semibold italic">而成为现场唯一的双语沟通者，是一种机遇，而非负担。</span>
+        </>,
+        <>
+          工作之余，我会审慎思考信息的传递方式——语气、精准度，以及那些被省略的内容。两年国际新闻与传播方向的系统学习，进一步强化了这种沟通意识。我相信，
+          <span className="font-semibold italic">冷静而清晰的沟通，是一项值得认真对待的能力。</span>
+        </>,
       ],
     },
     education: {
@@ -670,6 +708,28 @@ export default function Home() {
                   <div className="hidden md:block text-sm font-medium text-muted-foreground pt-0.5 text-right pr-12 border-r border-border/40">
                     <div className="whitespace-nowrap">{exp.date}</div>
                     <div className="text-xs font-normal mt-1">{exp.location}</div>
+                    {"logos" in exp && exp.logos ? (
+                      <div className="mt-3 flex justify-end items-center gap-1.5">
+                        {exp.logos.map((src, logoIndex) => (
+                          <Fragment key={src}>
+                            {logoIndex > 0 && (
+                              <span
+                                className="text-xs text-muted-foreground/70 font-medium"
+                                aria-hidden="true"
+                              >
+                                ×
+                              </span>
+                            )}
+                            <img src={src} alt="" className={experienceLogoClass} />
+                          </Fragment>
+                        ))}
+                      </div>
+                    ) : (
+                      "logo" in exp &&
+                      exp.logo && (
+                        <img src={exp.logo} alt="" className={`mt-3 ml-auto ${experienceLogoClass}`} />
+                      )
+                    )}
                   </div>
                   <div className="md:pl-4">
                     <div className="md:hidden text-sm font-medium text-muted-foreground mb-2">
@@ -690,7 +750,7 @@ export default function Home() {
         </section>
 
         {/* CAPABILITIES */}
-        <section id="capabilities" className="scroll-mt-32 pb-0 mb-0 -mb-12">
+        <section id="capabilities" className="scroll-mt-32">
           <FadeIn>
             <h2 className="text-sm uppercase tracking-widest text-muted-foreground mb-16 border-b border-border pb-4 font-medium">
               {c.capabilities.title}
@@ -737,20 +797,27 @@ export default function Home() {
             ))}
           </div>
           <FadeIn delay={0.3}>
-            <div className="mt-16 pt-8 border-t border-border/40 max-w-3xl">
-              <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
-                <span className="text-sm uppercase tracking-widest text-muted-foreground font-medium">{c.education.label}</span>
-                <div className="text-foreground">
-                  <span className="font-semibold">{c.education.school}</span>
-                  <span className="text-muted-foreground mx-2">|</span>
+            <div className="mt-16 max-w-3xl">
+              <h2 className="text-sm uppercase tracking-widest text-muted-foreground mb-16 border-b border-border pb-4 font-medium">
+                {c.education.label}
+              </h2>
+              <div className="flex items-start gap-5 md:gap-6">
+                <img
+                  src={tfsuLogoSrc}
+                  alt=""
+                  className="size-[5.75rem] md:size-[5.875rem] shrink-0 rounded-full object-cover ring-1 ring-border/50"
+                />
+                <div className="text-foreground text-base md:text-lg leading-relaxed">
+                  <span className="font-semibold text-lg md:text-xl">{c.education.school}</span>
+                  <span className="text-muted-foreground mx-2.5">|</span>
                   <span className="text-muted-foreground">{c.education.period}</span>
-                  <div className="mt-1 space-y-0.5 text-sm text-muted-foreground">
+                  <div className="mt-2 space-y-1 text-base text-muted-foreground">
                     {c.education.degrees.map((degree) => (
                       <div key={degree}>{degree}</div>
                     ))}
                   </div>
                   {"extra" in c.education && c.education.extra && (
-                    <div className="mt-2 text-sm text-muted-foreground">{c.education.extra}</div>
+                    <div className="mt-3 text-base text-muted-foreground">{c.education.extra}</div>
                   )}
                 </div>
               </div>
@@ -759,13 +826,10 @@ export default function Home() {
         </section>
 
         {/* CONTACT */}
-        <section
-          id="contact"
-          className="scroll-mt-32 flex flex-col justify-center border-t border-border/40 pt-4"
-        >
+        <section id="contact" className="scroll-mt-32 flex flex-col justify-center">
           <FadeIn>
             <div className="max-w-2xl">
-              <h2 className="text-sm uppercase tracking-widest text-muted-foreground mb-8 font-medium">
+              <h2 className="text-sm uppercase tracking-widest text-muted-foreground mb-16 border-b border-border pb-4 font-medium">
                 {c.contact.title}
               </h2>
               <h3 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
