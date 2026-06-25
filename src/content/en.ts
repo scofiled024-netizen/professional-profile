@@ -47,7 +47,7 @@ const en: SiteContent = {
         responsibility:
           "I acted as the primary English-language contact for overseas B2B clients and managed orders throughout their lifecycle.",
         actions:
-          "Tracked client records, pipeline, follow-ups, and order status in Zoho CRM. Responded to inquiries and prepared quotations. Coordinated order amendments and production updates. Followed shipments and kept clients informed. Prepared contracts, invoices, and packing lists. Supported after-sales issues, complaints, and payment follow-up.",
+          "Managed client records, pipeline, and order status in Zoho CRM, and responded to inquiries with quotations. Coordinated order amendments, production updates, and shipment tracking while keeping clients informed. Prepared contracts, invoices, and packing lists, and handled after-sales issues, complaints, and payment follow-up.",
         results:
           "Managed orders from initial inquiry through delivery and payment follow-up. Maintained clear communication between overseas clients and internal teams. Reduced the need for customers to chase for updates.",
         skills:
