@@ -158,7 +158,7 @@ const en: SiteContent = {
   },
   contact: {
     title: "Contact",
-    heading: "Let's talk about the role.",
+    heading: "Let's talk about the role!",
     body: "Currently open to customer-facing, B2B account management, or client success roles at international brands operating in China. Based in Shanghai. Available immediately.",
     bodyExtra: "",
     email: "scofiled024@gmail.com",

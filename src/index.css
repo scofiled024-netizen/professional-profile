@@ -2,6 +2,8 @@
 
 @theme inline {
   --font-sans: var(--app-font-sans);
+  --font-handwriting-en: var(--app-font-handwriting-en);
+  --font-handwriting-zh: var(--app-font-handwriting-zh);
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
@@ -62,6 +64,8 @@
   --app-font-sans: "Plus Jakarta Sans", "Noto Sans SC", sans-serif;
   --app-font-serif: "Georgia", serif;
   --app-font-mono: "Menlo", monospace;
+  --app-font-handwriting-en: "Caveat", cursive;
+  --app-font-handwriting-zh: "Songti SC", "STSong", "SimSun", "Noto Serif SC", serif;
   --radius: 0.75rem;
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -94,7 +98,7 @@
   --secondary: 0 0% 15%;
   --secondary-foreground: 0 0% 95%;
   --muted: 0 0% 15%;
-  --muted-foreground: 0 0% 60%;
+  --muted-foreground: 0 0% 70%;
   --accent: 0 0% 15%;
   --accent-foreground: 0 0% 95%;
   --destructive: 0 62% 30%;

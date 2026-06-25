@@ -257,7 +257,7 @@ export default function CareerBridgeMap({ lang }: CareerBridgeMapProps) {
                             {card.skills.map((skill) => (
                               <span
                                 key={skill}
-                                className="text-xs px-2.5 py-1 rounded-full bg-background border border-border/40 text-foreground"
+                                className="text-xs px-2.5 py-1 rounded-full bg-background border border-border/40 text-foreground hover:border-primary/40 hover:text-primary transition-colors cursor-default"
                               >
                                 {skill}
                               </span>

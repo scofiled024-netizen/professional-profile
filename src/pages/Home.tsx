@@ -6,6 +6,7 @@ import JDMatcher from "@/components/JDMatcher";
 import CareerBridgeMap from "@/components/CareerBridgeMap";
 import KnowledgeBridge from "@/components/KnowledgeBridge";
 import HowIWork from "@/components/HowIWork";
+import HandwritingHeading from "@/components/HandwritingHeading";
 import photoSrc from "@assets/profile-photo.jpg";
 import tfsuLogoSrc from "@assets/tfsu-logo.png";
 import dianjingLogoSrc from "@assets/dianjing-logo.png";
@@ -177,7 +178,7 @@ const CONTENT = {
     },
     contact: {
       title: "Contact",
-      heading: "Let's talk about the role.",
+      heading: "Let's talk about the role!",
       body: "Currently open to customer-facing, B2B account management, or client success roles at international brands operating in China. Location flexible. Open to nationwide and overseas assignments. Available immediately.",
       bodyExtra: "Also open to trade operations and international business coordination roles.",
       email: "scofiled024@gmail.com",
@@ -340,7 +341,7 @@ const CONTENT = {
     },
     contact: {
       title: "联系方式",
-      heading: "欢迎聊聊合适的机会。",
+      heading: "欢迎聊聊合适的机会!",
       body: "目前开放客户对接、B2B 大客户管理及客户成功类岗位机会，聚焦在华运营的国际品牌。驻地灵活，拥抱全国及海外派遣机会，随时可入职。",
       bodyExtra: "亦开放外贸跟单、国际业务协调等相关方向。",
       email: "scofiled024@gmail.com",
@@ -578,14 +579,14 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-6">
                     <button
                       onClick={() => scrollToSection("work")}
-                      className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3.5 rounded-full text-sm font-medium uppercase tracking-widest transition-colors w-full sm:w-auto sm:min-w-fit sm:whitespace-nowrap text-center"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3.5 rounded-full text-sm font-medium uppercase tracking-widest transition-colors w-full sm:w-auto sm:min-w-fit sm:whitespace-nowrap text-center shadow-sm hover:shadow-md"
                     >
                       {c.hero.button1}
                     </button>
                     <a
                       href={resumeUrl}
                       download={resumeFilename}
-                      className="border border-border text-foreground hover:border-foreground/40 hover:bg-muted/30 px-8 py-3.5 rounded-full text-sm font-medium uppercase tracking-widest transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2 whitespace-nowrap"
+                      className="border border-border/60 bg-transparent text-foreground hover:border-border hover:bg-muted/30 px-8 py-3.5 rounded-full text-sm font-medium uppercase tracking-widest transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2 whitespace-nowrap"
                     >
                       <Download className="w-4 h-4" />
                       {c.hero.button2}
@@ -669,7 +670,17 @@ export default function Home() {
                       {c.work.labels.actions}
                     </div>
                     <div className="text-foreground leading-relaxed">
-                      {card.actions}
+                      <ul className="space-y-2">
+                        {card.actions
+                          .split(/(?<=[.。])\s*/)
+                          .filter((action) => action.trim().length > 0)
+                          .map((action, i) => (
+                            <li key={i} className="flex items-start gap-3">
+                              <span className="text-muted-foreground/60 mt-2.5 w-1.5 h-1.5 rounded-full shrink-0 bg-current"></span>
+                              <span>{action.trim()}</span>
+                            </li>
+                          ))}
+                      </ul>
                     </div>
                     
                     <div className="text-sm font-medium uppercase tracking-widest text-muted-foreground pt-1 border-t border-border/40 md:border-none md:pt-0">
@@ -682,7 +693,7 @@ export default function Home() {
 
                   <div className="pt-8 border-t border-border/40 flex flex-wrap gap-2">
                     {card.skills.split(" · ").map((skill, i) => (
-                      <span key={i} className="px-3 py-1.5 bg-muted text-muted-foreground rounded-full text-xs font-medium tracking-wide">
+                      <span key={i} className="px-3 py-1.5 bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors cursor-default rounded-full text-xs font-medium tracking-wide">
                         {skill}
                       </span>
                     ))}
@@ -703,8 +714,8 @@ export default function Home() {
           <div className="relative border-l border-border/40 ml-3 md:ml-0 md:pl-0 space-y-16">
             {c.experience.entries.map((exp, index) => (
               <FadeIn key={index} delay={index * 0.1}>
-                <div className="relative pl-8 md:pl-0 md:grid md:grid-cols-[224px_1fr] md:gap-12">
-                  <div className="absolute left-[-5px] md:left-[219px] top-1.5 w-2 h-2 rounded-full bg-primary ring-4 ring-background"></div>
+                <div className="relative pl-8 md:pl-0 md:grid md:grid-cols-[224px_1fr] md:gap-12 group">
+                  <div className="absolute left-[-5px] md:left-[219px] top-1.5 w-2.5 h-2.5 rounded-full bg-border group-hover:bg-primary transition-colors ring-4 ring-background"></div>
                   <div className="hidden md:block text-sm font-medium text-muted-foreground pt-0.5 text-right pr-12 border-r border-border/40">
                     <div className="whitespace-nowrap">{exp.date}</div>
                     <div className="text-xs font-normal mt-1">{exp.location}</div>
@@ -827,14 +838,14 @@ export default function Home() {
 
         {/* CONTACT */}
         <section id="contact" className="scroll-mt-32 flex flex-col justify-center">
-          <FadeIn>
-            <div className="max-w-2xl">
+          <div className="max-w-2xl">
+            <FadeIn>
               <h2 className="text-sm uppercase tracking-widest text-muted-foreground mb-16 border-b border-border pb-4 font-medium">
                 {c.contact.title}
               </h2>
-              <h3 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
-                {c.contact.heading}
-              </h3>
+            </FadeIn>
+            <HandwritingHeading text={c.contact.heading} lang={lang} />
+            <FadeIn delay={0.1}>
               <p className="text-muted-foreground text-lg md:text-xl mb-4 font-light leading-relaxed">
                 {c.contact.body}
               </p>
@@ -871,8 +882,8 @@ export default function Home() {
                   <span>{c.contact.button}</span>
                 </a>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
         </section>
       </main>
 
