@@ -30,7 +30,6 @@ const UI = {
     match: "Match",
     strengths: "Best-Matched Strengths",
     gaps: "Possible Gaps",
-    talkingPoints: "Interview Talking Points",
     recruiterSummary: "Recruiter Summary",
     copySummary: "Copy Summary",
     copied: "Copied!",
@@ -63,7 +62,6 @@ const UI = {
     match: "匹配",
     strengths: "核心匹配优势",
     gaps: "待提升项",
-    talkingPoints: "面试应答要点",
     recruiterSummary: "招聘方摘要",
     copySummary: "复制摘要",
     copied: "已复制！",
@@ -308,21 +306,6 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
                     </li>
                   ))}
                 </ul>
-              </div>
-            )}
-
-            {result.interviewTalkingPoints.length > 0 && (
-              <div className="rounded-xl border border-border/40 bg-background/50 p-4">
-                <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3">
-                  {t.talkingPoints}
-                </p>
-                <ol className="space-y-2 list-decimal list-inside">
-                  {result.interviewTalkingPoints.map((point, i) => (
-                    <li key={i} className="text-sm leading-relaxed text-foreground pl-1">
-                      {point}
-                    </li>
-                  ))}
-                </ol>
               </div>
             )}
 

@@ -26,7 +26,7 @@ try {
       Authorization: `Bearer ${apiKey}`,
     },
     JSON.stringify({
-      model: "deepseek-chat",
+      model: "deepseek-v4-flash",
       messages: [{ role: "user", content: "Reply with JSON: {\"ok\":true}" }],
       response_format: { type: "json_object" },
       max_tokens: 20,

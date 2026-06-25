@@ -2,7 +2,7 @@ import { CANDIDATE_PROFILE } from "./profile.js";
 import { postJson } from "./deepseekHttp.js";
 
 const API_URL = "https://api.deepseek.com/chat/completions";
-const MODEL = "deepseek-chat";
+const MODEL = "deepseek-v4-flash";
 const RATE_LIMIT_MAX = 26;
 
 /** @type {Map<string, { count: number; date: string }>} */
