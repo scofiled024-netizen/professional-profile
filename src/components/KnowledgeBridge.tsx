@@ -112,9 +112,9 @@ export default function KnowledgeBridge({ lang, onNavigate }: KnowledgeBridgePro
         {c.pillars.map((pillar) => (
           <div
             key={pillar.id}
-            className="flex flex-col rounded-3xl border border-border/60 bg-card p-6 md:p-7 shadow-sm"
+            className="apple-card flex flex-col p-6 md:p-7"
           >
-            <p className="text-[11px] uppercase tracking-widest text-primary font-medium mb-2">
+            <p className="text-[11px] uppercase tracking-widest text-muted-foreground font-medium mb-2">
               {pillar.badge}
             </p>
             <h3 className="text-lg font-semibold tracking-tight text-foreground mb-4">
@@ -145,10 +145,10 @@ export default function KnowledgeBridge({ lang, onNavigate }: KnowledgeBridgePro
             <button
               type="button"
               onClick={() => onNavigate("work")}
-              className="mt-6 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-foreground hover:text-primary transition-colors group text-left"
+              className="apple-link mt-6 text-xs font-medium uppercase tracking-widest text-left group"
             >
               {c.labels.inPractice}
-              <span className="text-muted-foreground group-hover:text-primary">· {pillar.caseLabel}</span>
+              <span className="text-link/70">· {pillar.caseLabel}</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform shrink-0" />
             </button>
           </div>

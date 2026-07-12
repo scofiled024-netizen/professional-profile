@@ -25,10 +25,10 @@ const en: SiteContent = {
     cards: [
       {
         num: "01",
-        title: "Full-Cycle Overseas Client Operations, Solo",
+        title: "Full-Cycle Overseas Client Operations",
         tag: "JCBasic · Shanghai Tingdi Accessories Co., Ltd.",
         context:
-          "At JCBasic, I was the only English-speaking contact for overseas clients across Alibaba International, Etsy and brand website, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
+          "At JCBasic, I managed overseas clients across Alibaba International, Etsy and brand website, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
         responsibility:
           "I acted as the primary English-speaking contact for overseas clients and ran their orders through the full lifecycle, start to finish, entirely on my own.",
         actions:

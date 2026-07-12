@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Globe, Handshake, Users, Sparkles } from "lucide-react";
 
@@ -202,81 +202,84 @@ export default function CareerBridgeMap({ lang }: CareerBridgeMapProps) {
         {c.subtitle}
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {c.cards.map((card) => {
-            const Icon = card.icon;
-            const isOpen = selected === card.id;
-            return (
-              <div key={card.id} className="flex flex-col">
-                <button
-                  type="button"
-                  onClick={() => toggle(card.id)}
-                  aria-expanded={isOpen}
-                  className={`text-left rounded-2xl border p-5 transition-all focus:outline-none focus:ring-2 focus:ring-ring/40 ${
-                    isOpen
-                      ? "border-primary/40 bg-card shadow-md ring-1 ring-primary/10"
-                      : "border-border/60 bg-card/80 hover:border-border hover:shadow-sm"
-                  }`}
-                >
-                  <div className="flex items-start justify-between gap-2 mb-3">
-                    <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <Icon className="w-4 h-4 text-primary" />
-                    </div>
-                    <ChevronDown
-                      className={`w-4 h-4 text-muted-foreground shrink-0 transition-transform ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </div>
-                  <h3 className="text-base font-semibold text-foreground mb-2">{card.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{card.short}</p>
-                </button>
+      <div className="flex flex-col gap-4">
+        {c.cards.map((card) => {
+          const Icon = card.icon;
+          const isOpen = selected === card.id;
+          const panelId = `bridge-detail-${card.id}`;
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
-                      className="overflow-hidden"
-                    >
-                      <div className="mt-3 rounded-2xl border border-border/40 bg-muted/30 p-5 space-y-4">
-                        <p className="text-sm leading-relaxed text-foreground">{card.expanded}</p>
-                        <div>
-                          <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-2">
-                            {card.skillsLabel}
-                          </p>
-                          <div className="flex flex-wrap gap-1.5">
-                            {card.skills.map((skill) => (
-                              <span
-                                key={skill}
-                                className="text-xs px-2.5 py-1 rounded-full bg-background border border-border/40 text-foreground hover:border-primary/40 hover:text-primary transition-colors cursor-default"
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                        <div>
-                          <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-2">
-                            {card.rolesLabel}
-                          </p>
-                          <ul className="space-y-1">
-                            {card.roles.map((role) => (
-                              <li key={role} className="text-sm text-muted-foreground">
-                                · {role}
-                              </li>
-                            ))}
-                          </ul>
+          return (
+            <Fragment key={card.id}>
+              <button
+                type="button"
+                onClick={() => toggle(card.id)}
+                aria-expanded={isOpen}
+                aria-controls={panelId}
+                className="apple-card-interactive text-left p-5"
+              >
+                <div className="flex items-start justify-between gap-2 mb-3">
+                  <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <Icon className="w-4 h-4 text-primary" />
+                  </div>
+                  <ChevronDown
+                    className={`w-4 h-4 text-muted-foreground shrink-0 transition-transform ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </div>
+                <h3 className="text-base font-semibold text-foreground mb-2">{card.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{card.short}</p>
+              </button>
+
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    id={panelId}
+                    key={panelId}
+                    role="region"
+                    aria-label={card.title}
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
+                    className="overflow-hidden"
+                  >
+                    <div className="apple-card p-5 md:p-6 space-y-4">
+                      <p className="text-sm leading-relaxed text-foreground">{card.expanded}</p>
+                      <div>
+                        <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-2">
+                          {card.skillsLabel}
+                        </p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {card.skills.map((skill) => (
+                            <span
+                              key={skill}
+                              className="text-xs px-2.5 py-1 rounded-full bg-background/70 text-foreground transition-colors cursor-default hover:bg-background"
+                            >
+                              {skill}
+                            </span>
+                          ))}
                         </div>
                       </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
+                      <div>
+                        <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-2">
+                          {card.rolesLabel}
+                        </p>
+                        <ul className="space-y-1">
+                          {card.roles.map((role) => (
+                            <li key={role} className="text-sm text-muted-foreground">
+                              · {role}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </Fragment>
+          );
+        })}
       </div>
     </section>
   );

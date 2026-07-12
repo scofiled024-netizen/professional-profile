@@ -90,31 +90,31 @@ const LABEL_STYLES: Record<
   { bg: string; text: string; border: string; ring: string; icon: typeof CheckCircle2 }
 > = {
   "Strong Fit": {
-    bg: "bg-emerald-500/10",
-    text: "text-emerald-700 dark:text-emerald-400",
-    border: "border-emerald-500/30",
-    ring: "stroke-emerald-500",
+    bg: "bg-foreground/10",
+    text: "text-foreground",
+    border: "border-foreground/20",
+    ring: "stroke-foreground",
     icon: CheckCircle2,
   },
   "Good Fit": {
-    bg: "bg-sky-500/10",
-    text: "text-sky-700 dark:text-sky-400",
-    border: "border-sky-500/30",
-    ring: "stroke-sky-500",
+    bg: "bg-foreground/5",
+    text: "text-foreground",
+    border: "border-border",
+    ring: "stroke-foreground/70",
     icon: CheckCircle2,
   },
   "Partial Fit": {
-    bg: "bg-amber-500/10",
-    text: "text-amber-700 dark:text-amber-400",
-    border: "border-amber-500/30",
-    ring: "stroke-amber-500",
+    bg: "bg-muted",
+    text: "text-muted-foreground",
+    border: "border-border",
+    ring: "stroke-muted-foreground",
     icon: MinusCircle,
   },
   "Stretch Role": {
-    bg: "bg-orange-500/10",
-    text: "text-orange-700 dark:text-orange-400",
-    border: "border-orange-500/30",
-    ring: "stroke-orange-500",
+    bg: "bg-muted",
+    text: "text-muted-foreground",
+    border: "border-border/60",
+    ring: "stroke-muted-foreground/60",
     icon: AlertCircle,
   },
 };
@@ -197,12 +197,12 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
 
   return (
     <div
-      className="border border-border/60 bg-card rounded-3xl shadow-sm p-6 md:p-8 flex flex-col gap-5"
+      className="apple-card p-6 md:p-8 flex flex-col gap-5"
       data-testid="jd-matcher"
     >
       <div className="flex items-start gap-3">
-        <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-          <Sparkles className="w-4 h-4 text-primary" />
+        <div className="w-9 h-9 rounded-full bg-foreground/5 flex items-center justify-center shrink-0 mt-0.5">
+          <Sparkles className="w-4 h-4 text-foreground" />
         </div>
         <div>
           <h3 className="text-lg font-semibold tracking-tight text-foreground">{t.title}</h3>
@@ -278,14 +278,14 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
             </div>
 
             {result.strengths.length > 0 && (
-              <div className="rounded-xl border border-border/40 bg-background/50 p-4">
+              <div className="rounded-xl bg-background/50 p-4">
                 <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3">
                   {t.strengths}
                 </p>
                 <ul className="space-y-2">
                   {result.strengths.map((point, i) => (
                     <li key={i} className="flex gap-2 text-sm leading-relaxed text-foreground">
-                      <span className="text-primary mt-1 shrink-0">•</span>
+                      <span className="text-muted-foreground mt-1 shrink-0">•</span>
                       <span>{point}</span>
                     </li>
                   ))}
@@ -294,7 +294,7 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
             )}
 
             {result.gaps.length > 0 && (
-              <div className="rounded-xl border border-border/40 bg-background/50 p-4">
+              <div className="rounded-xl bg-background/50 p-4">
                 <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3">
                   {t.gaps}
                 </p>
@@ -309,7 +309,7 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
               </div>
             )}
 
-            <div className="rounded-xl bg-muted/50 border border-border/40 px-4 py-4">
+            <div className="rounded-xl bg-background/50 px-4 py-4">
               <div className="flex items-center justify-between gap-3 mb-3 flex-wrap">
                 <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium">
                   {t.recruiterSummary}
@@ -317,7 +317,7 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider text-foreground border border-border rounded-full px-3 py-1.5 hover:bg-background transition-colors focus:outline-none focus:ring-2 focus:ring-ring/40"
+                  className="apple-link text-xs font-medium uppercase tracking-wider gap-1.5"
                   data-testid="copy-summary-btn"
                 >
                   {copied ? (
@@ -345,7 +345,7 @@ export default function JDMatcher({ lang }: JDMatcherProps) {
                   {result.resumeKeywords.map((keyword, i) => (
                     <span
                       key={i}
-                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-foreground border border-border/40"
+                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-background/70 text-foreground"
                     >
                       {keyword}
                     </span>

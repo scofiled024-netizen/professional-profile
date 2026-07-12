@@ -1,5 +1,6 @@
 export const NAV_IDS = [
   "hero",
+  "bridge",
   "work",
   "experience",
   "capabilities",

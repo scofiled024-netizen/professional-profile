@@ -48,9 +48,9 @@ const CONTENT = {
       cards: [
         {
           num: "01",
-          title: "Full-Cycle Overseas Client Operations, Solo",
+          title: "Full-Cycle Overseas Client Operations",
           tag: "JCBasic · Shanghai Tingdi Accessories Co., Ltd.",
-          context: "At JCBasic, I was the only English-speaking contact for overseas clients across Alibaba International, Etsy and brand website, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
+          context: "At JCBasic, I managed overseas clients across Alibaba International, Etsy and brand website, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
           responsibility: "I acted as the primary English-speaking contact for overseas clients and ran their orders through the full lifecycle, start to finish, entirely on my own.",
           actions: "Managed client records, pipeline, and order status in Zoho CRM, and responded to inquiries with quotations. Coordinated order amendments, production updates, and shipment tracking while keeping clients informed. Prepared contracts, invoices, and packing lists, and handled after-sales issues, complaints, and payment follow-up.",
           results: "Managed orders from initial inquiry through delivery and payment follow-up. Maintained clear communication between overseas clients and internal teams. Reduced the need for customers to chase for updates.",
@@ -587,14 +587,14 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-6">
                     <button
                       onClick={() => scrollToSection("work")}
-                      className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3.5 rounded-full text-sm font-medium uppercase tracking-widest transition-colors w-full sm:w-auto sm:min-w-fit sm:whitespace-nowrap text-center shadow-sm hover:shadow-md"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3.5 rounded-full text-sm font-medium uppercase tracking-widest transition-colors w-full sm:w-auto sm:min-w-fit sm:whitespace-nowrap text-center"
                     >
                       {c.hero.button1}
                     </button>
                     <a
                       href={resumeUrl}
                       download={resumeFilename}
-                      className="border border-border/60 bg-transparent text-foreground hover:border-border hover:bg-muted/30 px-8 py-3.5 rounded-full text-sm font-medium uppercase tracking-widest transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2 whitespace-nowrap"
+                      className="border border-border/40 bg-transparent text-foreground hover:bg-muted/40 px-8 py-3.5 rounded-full text-sm font-medium uppercase tracking-widest transition-colors w-full sm:w-auto text-center flex items-center justify-center gap-2 whitespace-nowrap"
                     >
                       <Download className="w-4 h-4" />
                       {c.hero.button2}
@@ -646,7 +646,7 @@ export default function Home() {
           <div className="space-y-24 md:space-y-32">
             {c.work.cards.map((card, idx) => (
               <FadeIn key={idx} delay={idx * 0.1}>
-                <div className="group border border-border/40 bg-card p-8 md:p-12 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+                <div className="apple-card group p-8 md:p-12">
                   <div className="mb-8 md:mb-10">
                     <span className="text-4xl md:text-5xl font-light text-muted-foreground/30 block mb-4">
                       {card.num}
@@ -654,7 +654,7 @@ export default function Home() {
                     <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground mb-2">
                       {card.title}
                     </h3>
-                    <p className="text-primary font-medium tracking-wide text-sm md:text-base">
+                    <p className="text-muted-foreground font-medium tracking-wide text-sm md:text-base">
                       {card.tag}
                     </p>
                   </div>
@@ -701,7 +701,7 @@ export default function Home() {
 
                   <div className="pt-8 border-t border-border/40 flex flex-wrap gap-2">
                     {card.skills.split(" · ").map((skill, i) => (
-                      <span key={i} className="px-3 py-1.5 bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors cursor-default rounded-full text-xs font-medium tracking-wide">
+                      <span key={i} className="px-3 py-1.5 bg-background/70 text-muted-foreground hover:bg-background hover:text-foreground transition-colors cursor-default rounded-full text-xs font-medium tracking-wide">
                         {skill}
                       </span>
                     ))}
@@ -865,7 +865,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                 <a
                   href={`mailto:${c.contact.email}`}
-                  className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-widest text-foreground hover:text-primary transition-colors group"
+                  className="apple-link text-sm font-medium uppercase tracking-widest gap-3 group"
                 >
                   <Mail className="w-5 h-5" />
                   <span>{c.contact.emailLabel}</span>
@@ -875,7 +875,7 @@ export default function Home() {
                   href={c.contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-widest text-foreground hover:text-primary transition-colors group"
+                  className="apple-link text-sm font-medium uppercase tracking-widest gap-3 group"
                 >
                   <Linkedin className="w-5 h-5" />
                   <span>{c.contact.linkedinLabel}</span>
@@ -884,7 +884,7 @@ export default function Home() {
                 <a
                   href={resumeUrl}
                   download={resumeFilename}
-                  className="inline-flex items-center gap-3 text-sm font-medium uppercase tracking-widest text-foreground hover:text-primary transition-colors group sm:ml-4"
+                  className="apple-link text-sm font-medium uppercase tracking-widest gap-3 group sm:ml-4"
                 >
                   <Download className="w-5 h-5" />
                   <span>{c.contact.button}</span>
@@ -906,7 +906,7 @@ export default function Home() {
             transition={{ duration: 0.3 }}
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             aria-label="Back to top"
-            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full border border-border bg-background/80 backdrop-blur-md flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-foreground/40 transition-all shadow-sm hover:shadow-md"
+            className="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full border border-border/60 bg-background/80 backdrop-blur-md flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
           >
             <ArrowUp className="w-5 h-5" />
           </motion.button>

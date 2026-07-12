@@ -1,9 +1,12 @@
 export type SiteContent = {
   nav: {
     hero: string;
+    bridge: string;
     work: string;
     experience: string;
     capabilities: string;
+    knowledge: string;
+    "how-i-work": string;
     about: string;
     contact: string;
   };

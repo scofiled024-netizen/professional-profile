@@ -86,7 +86,7 @@ export default function HowIWork({ lang }: HowIWorkProps) {
           return (
             <div
               key={card.trait}
-              className="rounded-3xl border border-border/40 bg-muted/20 p-6 md:p-7 space-y-4"
+              className="apple-card p-6 md:p-7 space-y-4"
             >
               <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center">
                 <Icon className="w-4 h-4 text-primary" />
