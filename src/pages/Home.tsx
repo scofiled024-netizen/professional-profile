@@ -35,9 +35,9 @@ const CONTENT = {
     },
     hero: {
       name: "Chao Liu",
-      title: "Bilingual Client-Facing Professional · B2B Sales & Customer Experience",
-      subtitle: "B2B Client Relations · Bilingual Sales · International Brand Services",
-      intro: "I've closed 150+ deals solo at Asia's largest hospitality trade expo, managed a 300–400 person corporate client base for nearly three years, and handled international B2B clients entirely in English — without backup. I sit at the intersection of language, operations, and people. That's what bridge work actually looks like.",
+      title: "Bilingual Client Operations Coordinator · Cross-Border & Remote Teams",
+      subtitle: "Client Operations Coordination · Bilingual Communication · AI-Assisted Delivery",
+      intro: "I've independently run full order-to-payment cycles for overseas clients entirely in English, kept a 300–400 person corporate client base running smoothly for nearly three years, and closed 150+ deals solo at Asia's largest hospitality trade expo. I sit at the intersection of language, operations, and people — backed by hands-on experience using AI agents and vibe-coding to optimize workflows and build working products from scratch.",
       button1: "View Selected Work",
       button2: "Download Resume",
       linkedin: "https://www.linkedin.com/in/chaoliu-cn/",
@@ -48,6 +48,26 @@ const CONTENT = {
       cards: [
         {
           num: "01",
+          title: "Full-Cycle Overseas Client Operations, Solo",
+          tag: "JCBasic · Shanghai Tingdi Accessories Co., Ltd.",
+          context: "At JCBasic, I was the only English-speaking contact for overseas clients across Alibaba International, Etsy and brand website, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
+          responsibility: "I acted as the primary English-speaking contact for overseas clients and ran their orders through the full lifecycle, start to finish, entirely on my own.",
+          actions: "Managed client records, pipeline, and order status in Zoho CRM, and responded to inquiries with quotations. Coordinated order amendments, production updates, and shipment tracking while keeping clients informed. Prepared contracts, invoices, and packing lists, and handled after-sales issues, complaints, and payment follow-up.",
+          results: "Managed orders from initial inquiry through delivery and payment follow-up. Maintained clear communication between overseas clients and internal teams. Reduced the need for customers to chase for updates.",
+          skills: "CRM (Zoho) · Order Lifecycle Management · Client Communication · Documentation · Cross-Border Coordination · Stakeholder Management",
+        },
+        {
+          num: "02",
+          title: "On-Site Corporate Service Liaison at Lilith Games HQ",
+          tag: "Manner Coffee × Lilith Games · Shanghai · Jul 2023 – Mar 2026",
+          context: "Manner Coffee operates a dedicated café inside Lilith Games' flagship headquarters — an award-winning 215,000 sq ft campus in Shanghai. The café served as the primary hospitality touchpoint for the entire company.",
+          responsibility: "I was the permanent on-site liaison between Manner Coffee's operations team and Lilith Games' corporate administration — managing daily service delivery, issue resolution, and event coordination across two campus locations.",
+          actions: "Handled all client-facing communication with Lilith Games' admin team independently. Coordinated internal events from requirements gathering through execution. Managed daily revenue reconciliation, inventory tracking, and operational reporting consistently over nearly three years.",
+          results: "Maintained zero major service failures over a near three-year tenure. Delivered consistent service quality for a 300–400 person daily client base in a high-expectation corporate environment. Built a stable, trusted long-term relationship between two companies.",
+          skills: "Corporate Client Liaison · Issue Resolution · Event Coordination · Operational Reporting · Long-Term Relationship Management",
+        },
+        {
+          num: "03",
           title: "Representing International Coffee Brands at HOTELEX Shanghai",
           tag: "HOTELEX Shanghai 2026 · Panda Bear Express",
           context: "Panda Bear Express represented ICOSA Brewhouse and Biru Roast at HOTELEX Shanghai 2026 — one of Asia's largest hospitality and foodservice trade exhibitions.",
@@ -55,26 +75,6 @@ const CONTENT = {
           actions: "Communicated product value to Chinese trade buyers. Provided live English-Chinese interpretation for international brand representatives and competition baristas. Handled buyer questions and objections. Managed sales activity independently during high-traffic periods.",
           results: "Completed more than 150 sales transactions. Prevented communication breakdowns between international representatives and Chinese buyers. Maintained service quality throughout a high-pressure exhibition environment.",
           skills: "Bilingual Communication · Live Interpretation · Sales Support · International Brand Representation · Adaptability",
-        },
-        {
-          num: "02",
-          title: "Full-Cycle Overseas B2B Client Management",
-          tag: "JCBasic · Shanghai Tingdi Accessories Co., Ltd.",
-          context: "At JCBasic, I was the sole English-language contact for overseas clients across Alibaba International, Etsy and brand website, using Zoho CRM as the primary system for client records, pipeline tracking, and order status.",
-          responsibility: "I acted as the primary English-language contact for overseas B2B clients and managed orders throughout their lifecycle.",
-          actions: "Managed client records, pipeline, and order status in Zoho CRM, and responded to inquiries with quotations. Coordinated order amendments, production updates, and shipment tracking while keeping clients informed. Prepared contracts, invoices, and packing lists, and handled after-sales issues, complaints, and payment follow-up.",
-          results: "Managed orders from initial inquiry through delivery and payment follow-up. Maintained clear communication between overseas clients and internal teams. Reduced the need for customers to chase for updates.",
-          skills: "CRM (Zoho) · Order Management · Client Communication · Documentation · International Trade · Stakeholder Coordination",
-        },
-        {
-          num: "03",
-          title: "Managing a Corporate Coffee Account at Lilith Games HQ",
-          tag: "Manner Coffee × Lilith Games · Shanghai · Jul 2023 – Mar 2026",
-          context: "Manner Coffee operates a dedicated café inside Lilith Games' flagship headquarters — an award-winning 215,000 sq ft campus in Shanghai. The café served as the primary hospitality touchpoint for the entire company.",
-          responsibility: "I was the permanent on-site liaison between Manner Coffee's operations team and Lilith Games' corporate administration — managing daily service delivery, issue resolution, and event coordination across two campus locations.",
-          actions: "Handled all client-facing communication with Lilith Games' admin team independently. Coordinated internal events from requirements gathering through execution. Managed daily revenue reconciliation, inventory tracking, and operational reporting consistently over nearly three years.",
-          results: "Maintained zero major service failures over a near three-year tenure. Delivered consistent service quality for a 300–400 person daily client base in a high-expectation corporate environment. Built a stable, trusted long-term B2B service relationship between two companies.",
-          skills: "Corporate Account Management · Issue Resolution · Event Coordination · Operational Reporting · Long-Term Client Relations",
         },
       ],
       labels: {
@@ -97,7 +97,7 @@ const CONTENT = {
         },
         {
           date: "Jul 2023 – Mar 2026",
-          role: "Senior Barista & Corporate Client Liaison",
+          role: "Corporate Client Liaison & Senior Barista",
           company: "Manner Coffee × Lilith Games",
           location: "Shanghai",
           logos: [mannerLogoSrc, lilithGamesLogoSrc],
@@ -105,11 +105,11 @@ const CONTENT = {
         },
         {
           date: "Mar 2022 – Apr 2023",
-          role: "Foreign Trade Specialist & International Client Manager",
+          role: "International Client Operations Coordinator",
           company: "JCBasic (上海听谛服饰辅料有限公司)",
           location: "Shanghai",
           logo: jcbasicLogoSrc,
-          summary: "Sole English-language contact for overseas B2B clients on Alibaba International, Etsy and brand website. Managed the full order lifecycle in Zoho CRM, plus commercial documentation and after-sales coordination independently.",
+          summary: "Only English-speaking contact for overseas clients on Alibaba International, Etsy and brand website. Managed the full order lifecycle in Zoho CRM, plus commercial documentation and after-sales coordination independently.",
         },
         {
           date: "Sep – Dec 2021",
@@ -137,8 +137,8 @@ const CONTENT = {
           desc: "Building and maintaining professional relationships with clients across B2B, corporate, and exhibition contexts. Managing expectations, handling complaints, and keeping communication clear under pressure.",
         },
         {
-          name: "International Trade and Order Operations",
-          desc: "End-to-end order management across international platforms including Alibaba International, Etsy and brand website. Commercial documentation, shipment tracking, and receivables follow-up.",
+          name: "Cross-Border Client Operations & Coordination",
+          desc: "End-to-end order and account operations across international platforms including Alibaba International, Etsy and brand website. Commercial documentation, shipment tracking, and receivables follow-up.",
         },
         {
           name: "Bilingual and Cross-Cultural Communication",
@@ -148,13 +148,17 @@ const CONTENT = {
           name: "Service Delivery and Issue Resolution",
           desc: "Owning the full service experience from first contact to resolution. Acting as a first point of contact for demanding clients, resolving issues on the spot, and recovering service quality quickly.",
         },
+        {
+          name: "AI-Assisted Prototyping",
+          desc: "Given a job description, builds a small working tool — a workflow, dashboard, or reply-drafting assistant — that addresses the target company's actual day-to-day operations, often before the interview even happens. This site and its Recruiter Fit Report are one example; several more were built for specific interview processes.",
+        },
       ],
     },
     about: {
       title: "About",
       text: [
         <>
-          My career has moved across international trade, specialty coffee, corporate service operations, and live exhibition sales. These look like different industries — and they are. But the work in each has been fundamentally the same:{" "}
+          My career has moved across international trade, corporate service operations, live exhibition sales, and — more recently — building small AI-assisted tools when a role calls for it. These look like different lines of work, and they are. But the pattern underneath has been the same:{" "}
           <span className="font-semibold italic">understanding what someone needs, communicating it accurately, and making sure things move forward.</span>
         </>,
         <>
@@ -179,8 +183,8 @@ const CONTENT = {
     contact: {
       title: "Contact",
       heading: "Let's talk about the role!",
-      body: "Currently open to customer-facing, B2B account management, or client success roles at international brands operating in China. Location flexible. Open to nationwide and overseas assignments. Available immediately.",
-      bodyExtra: "Also open to trade operations and international business coordination roles.",
+      body: "Currently open to bilingual client operations, coordination, and customer success roles — in person or fully remote — connecting international or US-based companies with China-side clients, partners, or operations. Based in Chengdu. Available immediately.",
+      bodyExtra: "Also open to localization coordination, bilingual roles in gaming and tech, and AI-related bilingual work, plus nationwide and overseas assignments.",
       email: "scofiled024@gmail.com",
       emailLabel: "Email",
       linkedin: "https://www.linkedin.com/in/chaoliu-cn/",
@@ -201,9 +205,9 @@ const CONTENT = {
     },
     hero: {
       name: "刘超",
-      title: "双语客户服务专员 · B2B 销售与客户体验",
-      subtitle: "B2B 客户对接 · 双语销售 · 国际品牌服务",
-      intro: "在亚洲最大餐饮酒店展上独立完成 150 余笔成交；近三年服务 300 至 400 人规模企业客户，全程以英文处理海外 B2B 事务，独立承担全部职责。语言、运营与人——我站在三者的交汇点，这正是桥梁型工作的日常形态。",
+      title: "双语客户运营协调专员 · 跨境协作与远程协同",
+      subtitle: "跨境客户运营 · 双语协调沟通 · AI 辅助工具开发",
+      intro: "全程英文独立处理海外客户从询盘到回款的全流程，无需翻译协助；近三年稳定支撑一个 300 至 400 人规模的企业客户群；也曾在亚洲最大餐饮酒店展上独立完成 150 余笔成交。语言、运营与人——我站在三者的交汇点，同时具备使用 AI Agent 与 vibe coding 优化工作流程、独立开发出可用产品的实操经验。",
       button1: "查看精选项目",
       button2: "下载简历",
       linkedin: "https://www.linkedin.com/in/chaoliu-cn/",
@@ -214,6 +218,26 @@ const CONTENT = {
       cards: [
         {
           num: "01",
+          title: "独立支撑海外客户全周期运营",
+          tag: "JCBasic · 上海听谛服饰辅料有限公司",
+          context: "在 JCBasic，我负责通过阿里巴巴国际站、Etsy 及品牌官网对接海外客户，是团队唯一的英文客户联络人；以 Zoho CRM 作为主系统管理客户档案、销售跟进与订单状态。",
+          responsibility: "作为海外客户的唯一英文联络人，全程独立管理订单生命周期，不依赖翻译或任何后援。",
+          actions: "在 Zoho CRM 中维护客户档案、销售跟进与订单状态，响应询盘并出具报价。协调订单变更、生产进度与物流跟踪，主动同步客户状态。缮制合同、发票及装箱单，处理售后问题、客诉及应收款跟进。",
+          results: "全程无需翻译协助，独立对接海外客户，未发生需升级处理的重大客诉。主动同步订单进度，减少客户反复催问，维持长期稳定合作。",
+          skills: "CRM（Zoho）· 订单全周期管理 · 客户沟通 · 单证处理 · 跨境协调 · 利益相关方管理",
+        },
+        {
+          num: "02",
+          title: "驻场莉莉丝游戏总部企业客户联络人",
+          tag: "Manner Coffee × 莉莉丝游戏 · 上海 · 2023年7月–2026年3月",
+          context: "Manner Coffee 在莉莉丝游戏旗舰总部内运营一家专属咖啡馆——这座园区面积约两万平方米，曾多次荣获设计大奖，而咖啡馆是全公司重要的日常服务触点。",
+          responsibility: "我担任 Manner Coffee 运营团队与莉莉丝游戏企业行政团队之间的常驻现场联络人，负责两个园区的日常服务交付、问题处理及活动协调。",
+          actions: "独立处理与莉莉丝游戏行政团队的全部客户沟通。从需求确认到现场执行，全程跟进内部活动协调。近三年来持续进行每日收入核对、库存盘点和运营汇报。",
+          results: "近三年保持零重大服务失误，每日稳定服务 300 至 400 人规模的企业客户群。在高标准的企业客户环境中，建立并维护了两家公司之间长期、可信赖的合作关系。",
+          skills: "企业客户联络 · 问题解决 · 活动协调 · 运营报告 · 长期客户关系管理",
+        },
+        {
+          num: "03",
           title: "代表国际咖啡品牌参展 HOTELEX 上海国际酒店餐饮展",
           tag: "HOTELEX 上海 2026 · Panda Bear Express",
           context: "Panda Bear Express 代表 ICOSA Brewhouse 与 Biru Roast 参展 HOTELEX 上海国际酒店餐饮展 2026——亚洲规模最大的餐饮酒店行业贸易展之一。",
@@ -221,26 +245,6 @@ const CONTENT = {
           actions: "向中国贸易买家阐释产品价值；为国际品牌负责人及参赛咖啡师提供实时中英口译；处理买家咨询与异议，在客流高峰独立维持销售运转。",
           results: "四天内独立完成 150 多笔成交，有效避免外方团队与中国买家之间的沟通障碍，在高密度、高压力的展会环境中始终保持稳定的服务状态。",
           skills: "双语沟通 · 现场口译 · 销售支持 · 国际品牌代表 · 适应能力",
-        },
-        {
-          num: "02",
-          title: "海外 B2B 客户全周期管理",
-          tag: "JCBasic · 上海听谛服饰辅料有限公司",
-          context: "在 JCBasic，我负责通过阿里巴巴国际站、Etsy 及品牌官网对接海外客户，是团队唯一的英文客户联络人；以 Zoho CRM 作为主系统管理客户档案、销售跟进与订单状态。",
-          responsibility: "作为海外 B2B 客户的唯一英文联络人，全程独立管理订单生命周期。",
-          actions: "在 Zoho CRM 中维护客户档案、销售跟进与订单状态，响应询盘并出具报价。协调订单变更、生产进度与物流跟踪，主动同步客户状态。缮制合同、发票及装箱单，处理售后问题、客诉及应收款跟进。",
-          results: "全程无需翻译协助，独立对接海外客户，未发生需升级处理的重大客诉。主动同步订单进度，减少客户反复催问，维持长期稳定合作。",
-          skills: "CRM（Zoho）· 订单管理 · 客户沟通 · 单证处理 · 国际贸易 · 利益相关方协调",
-        },
-        {
-          num: "03",
-          title: "驻场莉莉丝游戏总部 · 企业大客户咖啡服务管理",
-          tag: "Manner Coffee × 莉莉丝游戏 · 上海 · 2023年7月–2026年3月",
-          context: "Manner Coffee 在莉莉丝游戏旗舰总部内运营一家专属咖啡馆——这座园区面积约两万平方米，曾多次荣获设计大奖，而咖啡馆是全公司重要的日常服务触点。",
-          responsibility: "我担任 Manner Coffee 运营团队与莉莉丝游戏企业行政团队之间的常驻现场联络人，负责两个园区的日常服务交付、问题处理及活动协调。",
-          actions: "独立处理与莉莉丝游戏行政团队的全部客户沟通。从需求确认到现场执行，全程跟进内部活动协调。近三年来持续进行每日收入核对、库存盘点和运营汇报。",
-          results: "近三年保持零重大服务失误，每日稳定服务 300 至 400 人规模的企业客户群。在高标准的企业客户环境中，建立并维护了两家公司之间长期、可信赖的 B2B 服务合作关系。",
-          skills: "企业客户管理 · 问题解决 · 活动协调 · 运营报告 · 长期客户维系",
         },
       ],
       labels: {
@@ -263,7 +267,7 @@ const CONTENT = {
         },
         {
           date: "2023年7月–2026年3月",
-          role: "高级咖啡师 / 企业客户对接人",
+          role: "企业客户联络人 / 高级咖啡师",
           company: "Manner Coffee × 莉莉丝游戏",
           location: "上海",
           logos: [mannerLogoSrc, lilithGamesLogoSrc],
@@ -271,11 +275,11 @@ const CONTENT = {
         },
         {
           date: "2022年3月–2023年4月",
-          role: "外贸专员 & 国际客户经理",
+          role: "国际客户运营协调专员",
           company: "JCBasic（上海听谛服饰辅料有限公司）",
           location: "上海",
           logo: jcbasicLogoSrc,
-          summary: "担任阿里巴巴国际站、Etsy 及品牌官网上的海外 B2B 客户的唯一英语联络人；以 Zoho CRM 管理客户档案、销售跟进与订单状态，独立负责商业单证及售后协调。",
+          summary: "担任阿里巴巴国际站、Etsy 及品牌官网上海外客户的唯一英语联络人；以 Zoho CRM 管理客户档案、销售跟进与订单状态，独立负责商业单证及售后协调。",
         },
         {
           date: "2021年9月–12月",
@@ -303,8 +307,8 @@ const CONTENT = {
           desc: "在 B2B、企业及展会等不同场景中建立并维护专业的客户关系，管理客户期望，处理投诉，并在高压环境下确保沟通清晰无误。",
         },
         {
-          name: "国际贸易与订单运营",
-          desc: "跨平台（阿里巴巴国际站、Etsy、品牌官网）的全周期订单管理，涵盖商业单证、发货追踪及应收款跟进。",
+          name: "跨境客户运营与协调",
+          desc: "跨平台（阿里巴巴国际站、Etsy、品牌官网）及 CRM 系统的端到端订单与客户运营，涵盖商业单证、发货追踪及应收款跟进。",
         },
         {
           name: "双语与跨文化沟通",
@@ -314,13 +318,17 @@ const CONTENT = {
           name: "服务交付与问题解决",
           desc: "全程主导从首次接触到问题解决的完整服务体验。作为高要求客户的第一联络人，现场解决问题，快速恢复服务质量。",
         },
+        {
+          name: "AI 辅助原型开发",
+          desc: "拿到一份职位描述（JD）后，我会先做出一个能真正解决该公司实际运营问题的小工具——一个工作流、看板或自动回复助手，而不是空谈自己「对 AI 感兴趣」。这个网站和其中的招聘匹配报告就是一个例子；另外还为几次具体的面试流程单独做过类似的小工具。",
+        },
       ],
     },
     about: {
       title: "关于我",
       text: [
         <>
-          我的职业经历横跨国际贸易、精品咖啡、企业服务运营和现场展会销售。这些经历分属不同行业，确实如此；但每份工作的内核始终如一：
+          我的职业经历横跨国际贸易、企业服务运营、现场展会销售，最近还多了一项——在需要的时候，自己动手做一些 AI 辅助的小工具。这些看起来是完全不同的工作方式，也确实如此；但底层的逻辑始终如一：
           <span className="font-semibold italic">理解对方需求，精准传达信息，并确保事情向前推进。</span>
         </>,
         <>
@@ -342,8 +350,8 @@ const CONTENT = {
     contact: {
       title: "联系方式",
       heading: "欢迎聊聊合适的机会!",
-      body: "目前开放客户对接、B2B 大客户管理及客户成功类岗位机会，聚焦在华运营的国际品牌。驻地灵活，拥抱全国及海外派遣机会，随时可入职。",
-      bodyExtra: "亦开放外贸跟单、国际业务协调等相关方向。",
+      body: "目前开放双语客户运营、协调与客户成功类岗位机会——现场或远程均可，衔接国际企业与中国境内的客户、合作方或运营团队。常驻成都，随时可入职。",
+      bodyExtra: "亦开放本地化协调、游戏与科技行业双语岗位，以及 AI 相关双语工作方向，同时接受全国及海外派遣。",
       email: "scofiled024@gmail.com",
       emailLabel: "邮箱",
       linkedin: "https://www.linkedin.com/in/chaoliu-cn/",

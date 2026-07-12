@@ -12,7 +12,7 @@ const CONTENT = {
         icon: Compass,
         trait: "Cross-cultural independence",
         evidence:
-          "Solo travel across Southeast Asia (7 countries, 1+ month) and extensive travel across China — plus serving as the sole English-language B2B contact without backup.",
+          "Solo travel across Southeast Asia (7 countries, 1+ month) and extensive travel across China — plus serving as the only English-speaking contact for B2B accounts.",
         fit: "Roles that require on-site ownership, travel, and calm problem-solving in unfamiliar environments.",
       },
       {

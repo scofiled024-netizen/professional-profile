@@ -15,8 +15,8 @@ const CONTENT = {
         knowledge:
           "International trade flows, commercial logic, and cross-border business context.",
         applied: "JCBasic full-cycle orders, Zoho CRM client and order tracking, documentation, and platform operations.",
-        roles: "Trade client manager · International ops · B2B coordination",
-        caseLabel: "Case 02 — JCBasic",
+        roles: "Client operations coordinator · International ops · Cross-border coordination",
+        caseLabel: "Case 01 — JCBasic",
       },
       {
         id: "english",
@@ -26,7 +26,7 @@ const CONTENT = {
         applied:
           "Sole English contact for overseas clients, live exhibition interpretation, 150+ independent sales conversations.",
         roles: "Bilingual client success · Brand representative · Customer Success",
-        caseLabel: "Cases 01 & 02 — HOTELEX · JCBasic",
+        caseLabel: "Cases 01 & 03 — JCBasic · HOTELEX",
       },
       {
         id: "comms",
@@ -37,7 +37,7 @@ const CONTENT = {
         applied:
           "Brand value translation at HOTELEX, cross-cultural information transfer under pressure, clear stakeholder communication.",
         roles: "Brand comms support · PR/content assist · International market communication",
-        caseLabel: "Case 01 — HOTELEX",
+        caseLabel: "Case 03 — HOTELEX",
       },
     ],
     labels: {
@@ -57,8 +57,8 @@ const CONTENT = {
         badge: "本科 · 2016–2020",
         knowledge: "国际贸易流程、商业逻辑与跨境商务语境。",
         applied: "JCBasic 全周期订单、Zoho CRM 客户与订单跟进、单证处理与平台运营。",
-        roles: "外贸客户经理 · 国际业务协调 · B2B 运营",
-        caseLabel: "案例 02 — JCBasic",
+        roles: "客户运营协调专员 · 国际业务协调 · 跨境协作",
+        caseLabel: "案例 01 — JCBasic",
       },
       {
         id: "english",
@@ -67,7 +67,7 @@ const CONTENT = {
         knowledge: "书面表达、语言结构与跨文化语用。",
         applied: "海外客户唯一英文联络、展会现场口译、150+ 独立成交沟通。",
         roles: "双语客户成功 · 品牌代表 · 客户成功",
-        caseLabel: "案例 01 & 02 — HOTELEX · JCBasic",
+        caseLabel: "案例 01 & 03 — JCBasic · HOTELEX",
       },
       {
         id: "comms",
@@ -76,7 +76,7 @@ const CONTENT = {
         knowledge: "传播学框架、国际新闻语境与受众导向的信息表达。",
         applied: "HOTELEX 品牌信息转译、高压下的跨文化沟通、清晰的利益相关方表达。",
         roles: "品牌传播支持 · 公关/内容协助 · 国际化市场沟通",
-        caseLabel: "案例 01 — HOTELEX",
+        caseLabel: "案例 03 — HOTELEX",
       },
     ],
     labels: {
