@@ -14,7 +14,7 @@ const en: SiteContent = {
     title: "Bilingual Client Operations Coordinator · Cross-Border Teams · English–Chinese",
     subtitle: "Client Operations Coordination · Bilingual Communication · AI-Assisted Delivery",
     intro:
-      "I've independently run full order-to-payment cycles for overseas clients entirely in English, kept a 300–400 person corporate client base running smoothly for nearly three years, and closed 150+ deals solo at Asia's largest hospitality trade expo. I sit at the intersection of language, operations, and people — backed by hands-on experience using AI agents and vibe-coding to optimize workflows and build working products from scratch.",
+      "I've independently run full order-to-payment cycles for overseas clients entirely in English, kept a 300–400 person corporate client base running smoothly for nearly three years, and closed 150+ deals solo at Asia's largest hospitality trade expo. I sit at the intersection of language, operations, and people — backed by hands-on experience using AI agents and vibe-coding to optimize workflows and build working products from scratch. Most recently I worked remotely as a Transaction Coordinator for a US commercial real estate brokerage.",
     button1: "View Selected Work",
     button2: "Download Resume",
     linkedin: "https://www.linkedin.com/in/chaoliu-cn/",
@@ -79,6 +79,14 @@ const en: SiteContent = {
   experience: {
     title: "Experience",
     entries: [
+      {
+        date: "Aug 2026",
+        role: "Transaction Coordinator",
+        company: "Ivory Commercial Real Estate (ICRE)",
+        location: "Remote",
+        summary:
+          "Remote Transaction Coordinator supporting a US commercial real estate leasing pipeline. Used CoStar for listing research, drafted and sent English inquiries and client emails, and assisted with tour and LOI follow-up. Also built bilingual CRE communication helpers to keep remote written work accurate and on-process.",
+      },
       {
         date: "Mar – Apr 2026",
         role: "Bilingual Brand Representative & On-Site Sales",
@@ -149,7 +157,7 @@ const en: SiteContent = {
   about: {
     title: "About",
     text: [
-      "My career has moved across international trade, corporate service operations, live exhibition sales, and — more recently — building small AI-assisted tools when a role calls for it. These look like different lines of work, and they are. But the pattern underneath has been the same: understanding what someone needs, communicating it accurately, and making sure things move forward.",
+      "My career has moved across international trade, corporate service operations, live exhibition sales, remote transaction coordination with a US team, and — more recently — building small AI-assisted tools when a role calls for it. These look like different lines of work, and they are. But the pattern underneath has been the same: understanding what someone needs, communicating it accurately, and making sure things move forward.",
       "I am drawn to roles where the gap between what is said and what is understood actually matters. Where a poorly translated email causes a delayed shipment. Where a client's frustration, handled well, becomes a reason to stay. Where being the only bilingual person in the room is an opportunity, not a burden.",
       "Outside of work, I think carefully about how things are communicated — tone, precision, what gets left out. I believe calm, clear communication is a skill worth taking seriously.",
     ],
@@ -163,7 +171,7 @@ const en: SiteContent = {
   contact: {
     title: "Contact",
     heading: "Let's talk about the role!",
-    body: "Currently open to bilingual client operations, coordination, and customer success roles — in person or fully remote — connecting international or US-based companies with China-side clients, partners, or operations. Based in Chengdu. Available immediately.",
+    body: "Currently open to bilingual client operations, coordination, and customer success roles — in person or fully remote — connecting international or US-based companies with China-side clients, partners, or operations, and supporting US-side operations remotely. Based in Chengdu. Available immediately.",
     bodyExtra: "Also open to localization coordination, bilingual roles in gaming and tech, and AI-related bilingual work, plus nationwide and overseas assignments.",
     email: "scofiled024@gmail.com",
     emailLabel: "Email",

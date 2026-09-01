@@ -16,7 +16,7 @@ const CONTENT = {
         title: "Cross-Border Client Operations",
         short: "Built a foundation in cross-border communication, documentation, client/vendor coordination, and full order-cycle workflows.",
         expanded:
-          "Running full-cycle orders for overseas clients entirely in English gave me practical exposure to cross-border business, documentation, and coordinating across multiple stakeholders with no interpreter to fall back on. This foundation supports roles in client operations, transaction coordination, business operations, and overseas account management.",
+          "Running full-cycle orders for overseas clients entirely in English gave me practical exposure to cross-border business, documentation, and coordinating across multiple stakeholders with no interpreter to fall back on. I used the same follow-up muscle remotely as a Transaction Coordinator at ICRE — English inquiries, deal-thread updates, and keeping the pipeline moving. This foundation supports roles in client operations, transaction coordination, business operations, and overseas account management.",
         skills: [
           "Cross-border communication",
           "Client/vendor coordination",
@@ -115,7 +115,7 @@ const CONTENT = {
         title: "跨境客户运营",
         short: "在跨境沟通、单证处理、客户/供应商协调与完整订单流程方面打下扎实基础。",
         expanded:
-          "全英文独立跑完整个海外订单流程，让我积累了跨境业务、单证处理，以及在没有翻译或后援的情况下协调多方利益相关者的实战经验，适合客户运营、交易协调、商务运营与海外客户管理类岗位。",
+          "全英文独立跑完整个海外订单流程，让我积累了跨境业务、单证处理，以及在没有翻译或后援的情况下协调多方利益相关者的实战经验。同一套跟进能力，我在 ICRE 远程交易协调岗位上用过——英文询价、交易线程同步、把节点往前推。适合客户运营、交易协调、商务运营与海外客户管理类岗位。",
         skills: ["跨境沟通", "客户/供应商协调", "CRM 与单证处理", "商务英语", "跟进与执行"],
         roles: ["客户运营协调专员", "交易协调专员", "商务运营助理", "国际客户经理"],
         skillsLabel: "技能",

@@ -15,6 +15,7 @@ import yuanfudaoLogoSrc from "@assets/yuanfudao-logo.png";
 import mannerLogoSrc from "@assets/manner-logo.png";
 import lilithGamesLogoSrc from "@assets/lilith-games-logo.png";
 import jcbasicLogoSrc from "@assets/jcbasic-logo.png";
+import icreLogoSrc from "@assets/icre-logo.svg";
 
 const experienceLogoClass =
   "size-[3.025rem] shrink-0 rounded-md object-contain ring-1 ring-border/50 bg-white";
@@ -37,7 +38,7 @@ const CONTENT = {
       name: "Chao Liu",
       title: "Bilingual Client Operations Coordinator · Cross-Border & Remote Teams",
       subtitle: "Client Operations Coordination · Bilingual Communication · AI-Assisted Delivery",
-      intro: "I've independently run full order-to-payment cycles for overseas clients entirely in English, kept a 300–400 person corporate client base running smoothly for nearly three years, and closed 150+ deals solo at Asia's largest hospitality trade expo. I sit at the intersection of language, operations, and people — backed by hands-on experience using AI agents and vibe-coding to optimize workflows and build working products from scratch.",
+      intro: "I've independently run full order-to-payment cycles for overseas clients entirely in English, kept a 300–400 person corporate client base running smoothly for nearly three years, and closed 150+ deals solo at Asia's largest hospitality trade expo. I sit at the intersection of language, operations, and people — backed by hands-on experience using AI agents and vibe-coding to optimize workflows and build working products from scratch. Most recently I worked remotely as a Transaction Coordinator for a US commercial real estate brokerage.",
       button1: "View Selected Work",
       button2: "Download Resume",
       linkedin: "https://www.linkedin.com/in/chaoliu-cn/",
@@ -87,6 +88,14 @@ const CONTENT = {
     experience: {
       title: "Experience",
       entries: [
+        {
+          date: "Aug 2026",
+          role: "Transaction Coordinator",
+          company: "Ivory Commercial Real Estate (ICRE)",
+          location: "Remote",
+          logo: icreLogoSrc,
+          summary: "Remote Transaction Coordinator supporting a US commercial real estate leasing pipeline. Used CoStar for listing research, drafted and sent English inquiries and client emails, and assisted with tour and LOI follow-up. Also built bilingual CRE communication helpers to keep remote written work accurate and on-process.",
+        },
         {
           date: "Mar – Apr 2026",
           role: "Bilingual Brand Representative & On-Site Sales",
@@ -158,7 +167,7 @@ const CONTENT = {
       title: "About",
       text: [
         <>
-          My career has moved across international trade, corporate service operations, live exhibition sales, and — more recently — building small AI-assisted tools when a role calls for it. These look like different lines of work, and they are. But the pattern underneath has been the same:{" "}
+          My career has moved across international trade, corporate service operations, live exhibition sales, remote transaction coordination with a US team, and — more recently — building small AI-assisted tools when a role calls for it. These look like different lines of work, and they are. But the pattern underneath has been the same:{" "}
           <span className="font-semibold italic">understanding what someone needs, communicating it accurately, and making sure things move forward.</span>
         </>,
         <>
@@ -183,7 +192,7 @@ const CONTENT = {
     contact: {
       title: "Contact",
       heading: "Let's talk about the role!",
-      body: "Currently open to bilingual client operations, coordination, and customer success roles — in person or fully remote — connecting international or US-based companies with China-side clients, partners, or operations. Based in Chengdu. Available immediately.",
+      body: "Currently open to bilingual client operations, coordination, and customer success roles — in person or fully remote — connecting international or US-based companies with China-side clients, partners, or operations, and supporting US-side operations remotely. Based in Chengdu. Available immediately.",
       bodyExtra: "Also open to localization coordination, bilingual roles in gaming and tech, and AI-related bilingual work, plus nationwide and overseas assignments.",
       email: "scofiled024@gmail.com",
       emailLabel: "Email",
@@ -207,7 +216,7 @@ const CONTENT = {
       name: "刘超",
       title: "双语客户运营协调专员 · 跨境协作与远程协同",
       subtitle: "跨境客户运营 · 双语协调沟通 · AI 辅助工具开发",
-      intro: "全程英文独立处理海外客户从询盘到回款的全流程，无需翻译协助；近三年稳定支撑一个 300 至 400 人规模的企业客户群；也曾在亚洲最大餐饮酒店展上独立完成 150 余笔成交。语言、运营与人——我站在三者的交汇点，同时具备使用 AI Agent 与 vibe coding 优化工作流程、独立开发出可用产品的实操经验。",
+      intro: "全程英文独立处理海外客户从询盘到回款的全流程，无需翻译协助；近三年稳定支撑一个 300 至 400 人规模的企业客户群；也曾在亚洲最大餐饮酒店展上独立完成 150 余笔成交。语言、运营与人——我站在三者的交汇点，同时具备使用 AI Agent 与 vibe coding 优化工作流程、独立开发出可用产品的实操经验。最近还远程担任过美国商业地产经纪公司的交易协调专员。",
       button1: "查看精选项目",
       button2: "下载简历",
       linkedin: "https://www.linkedin.com/in/chaoliu-cn/",
@@ -257,6 +266,14 @@ const CONTENT = {
     experience: {
       title: "工作经历",
       entries: [
+        {
+          date: "2026年8月",
+          role: "交易协调专员",
+          company: "Ivory Commercial Real Estate（ICRE）",
+          location: "远程",
+          logo: icreLogoSrc,
+          summary: "远程支持美国商业地产租赁交易链：用 CoStar 检索 listing，起草并发送英文询价与客人邮件，协助带看与意向书跟进。并做了双语 CRE 沟通辅助工具，降低远程书面沟通出错。",
+        },
         {
           date: "2026年3月–4月",
           role: "双语品牌代表 & 现场销售",
@@ -328,7 +345,7 @@ const CONTENT = {
       title: "关于我",
       text: [
         <>
-          我的职业经历横跨国际贸易、企业服务运营、现场展会销售，最近还多了一项——在需要的时候，自己动手做一些 AI 辅助的小工具。这些看起来是完全不同的工作方式，也确实如此；但底层的逻辑始终如一：
+          我的职业经历横跨国际贸易、企业服务运营、现场展会销售、与美国团队的远程交易协调，最近还多了一项——在需要的时候，自己动手做一些 AI 辅助的小工具。这些看起来是完全不同的工作方式，也确实如此；但底层的逻辑始终如一：
           <span className="font-semibold italic">理解对方需求，精准传达信息，并确保事情向前推进。</span>
         </>,
         <>
@@ -350,7 +367,7 @@ const CONTENT = {
     contact: {
       title: "联系方式",
       heading: "欢迎聊聊合适的机会!",
-      body: "目前开放双语客户运营、协调与客户成功类岗位机会——现场或远程均可，衔接国际企业与中国境内的客户、合作方或运营团队。常驻成都，随时可入职。",
+      body: "目前开放双语客户运营、协调与客户成功类岗位机会——现场或远程均可，衔接国际企业与中国境内的客户、合作方或运营团队，亦可远程支持美国侧运营。常驻成都，随时可入职。",
       bodyExtra: "亦开放本地化协调、游戏与科技行业双语岗位，以及 AI 相关双语工作方向，同时接受全国及海外派遣。",
       email: "scofiled024@gmail.com",
       emailLabel: "邮箱",
@@ -580,7 +597,10 @@ export default function Home() {
             {/* Left column: intro + CTAs — grid row 2 aligns with JD Matcher */}
             <div className="order-3 lg:order-none lg:col-start-1 lg:row-start-2 relative z-10 overflow-visible">
               <FadeIn delay={0.1}>
-                <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl font-light">
+                <p
+                  key={c.hero.intro}
+                  className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl font-light"
+                >
                   {c.hero.intro}
                 </p>
                 <div className="flex flex-col items-start">
